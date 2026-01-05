@@ -1,0 +1,21 @@
+:root {
+    --default-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --default-bg: #f8fafc;
+    --card-bg: #f8fafc;
+    --primary-color: #475569;
+    --muted-color: #64748b;
+    --accent_color: #3b82f6;
+    --border-color: #e2e8f0;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+body {
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--default-bg);
+    line-height: 1.6;
+}
