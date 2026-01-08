@@ -20,7 +20,7 @@
     "express": "^5.2.1",
     "firebase-admin": "^13.6.0",
     "fs": "^0.0.1-security",
-    "node-fetch": "^3.3.2",
+    "node-fetch": "^2.7.0",
     "path": "^0.12.7"
   },
   "repository": {
@@ -30,5 +30,6 @@
   "bugs": {
     "url": "https://github.com/KizuKoFaith/kumanovels/issues"
   },
-  "homepage": "https://github.com/KizuKoFaith/kumanovels#readme"
+  "homepage": "https://github.com/KizuKoFaith/kumanovels#readme",
+  "devDependencies": {}
 }
