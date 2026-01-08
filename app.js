@@ -19,6 +19,23 @@ app.get("/page/:year/:slug", (req, res) => {
   res.sendFile(path.join(__dirname, "page", "page.html"));
 });
 
+// Updated routes to support optional /page for Express 5.0 syntax
+app.get("/search/year/:year{/:page}", (req, res) => {
+  res.sendFile(path.join(__dirname, "search.html"));
+});
+
+app.get("/search/type/:type{/:page}", (req, res) => {
+  res.sendFile(path.join(__dirname, "search.html"));
+});
+
+app.get("/search/genre/:genre{/:page}", (req, res) => {
+  res.sendFile(path.join(__dirname, "search.html"));
+});
+
+app.get("/search/q/:query{/:page}", (req, res) => {
+  res.sendFile(path.join(__dirname, "search.html"));
+});
+
 app.get("/proxy-image", async (req, res) => {
   try {
     const imageUrl = req.query.url;

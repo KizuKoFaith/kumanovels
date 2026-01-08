@@ -26,7 +26,7 @@
                             <li><a href="#" id="item-list">Login</a></li>
                             <li>
                                 <form
-                                    action="/search.html"
+                                    id="novel-search-form"
                                     method="GET"
                                     class="search-form"
                                 >
@@ -317,11 +317,11 @@
                                 );
 
                                 $("#breadcramp-type").click(() => {
-                                    window.location.href = `/search.html?type=${volumeData.additional_info.type}`;
+                                    window.location.href = `/search/type/${volumeData.additional_info.type}/1`;
                                 });
 
                                 $("#breadcramp-year").click(() => {
-                                    window.location.href = `/search.html?year=${year}`;
+                                    window.location.href = `/search/year/${year}/1`;
                                 });
 
                                 // Update Images
@@ -365,20 +365,27 @@
                                     volumeData.volumes.url,
                                 );
 
-                                // Render Genres (Ensuring it executes correctly)
+                                // Render Genres with Clickable Links
                                 if (
                                     volumeData.genres &&
                                     Array.isArray(volumeData.genres)
                                 ) {
                                     const genreHtml = volumeData.genres
-                                        .map(
-                                            (g) =>
-                                                `<span class="genre-tag">${g}</span>`,
-                                        )
+                                        .map((g) => {
+                                            // Encode the genre for the URL
+                                            const encodedGenre =
+                                                encodeURIComponent(g);
+                                            return `<span class="genre-tag"
+                                                          style="cursor: pointer;"
+                                                          onclick="window.location.href='/search/genre/${encodedGenre}/1'">
+                                                        ${g}
+                                                    </span>`;
+                                        })
                                         .join("");
+
                                     $("#genre-container")
                                         .empty()
-                                        .append(genreHtml); // Clear old and add new
+                                        .append(genreHtml);
                                 }
                             }
                         },

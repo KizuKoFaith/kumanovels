@@ -26,7 +26,7 @@
                             <li><a href="#" id="item-list">Login</a></li>
                             <li>
                                 <form
-                                    action="/search.html"
+                                    id="novel-search-form"
                                     method="GET"
                                     class="search-form"
                                 >
@@ -202,28 +202,36 @@
         <script src="/script/script.js"></script>
         <script>
             $(document).ready(function () {
-                let currentPage = 1;
                 let pageLimit = 5;
-                let totalPages = 1; // Store this globally to use in click handlers
+                let totalPages = 1;
 
-                const urlParams = new URLSearchParams(window.location.search);
-                const searchQuery = urlParams.get("search");
-                const typeQuery = urlParams.get("type");
-                const genreQuery = urlParams.get("genre");
-                const yearQuery = urlParams.get("year");
+                // 1. Detect parameters from the PATH instead of SEARCH
+                // URL format: /search/:type/:value/:page
+                const pathParts = window.location.pathname.split("/");
+                const filterType = pathParts[2]; // 'year', 'type', 'genre', or 'q'
+                const filterValue = decodeURIComponent(pathParts[3] || "");
+                let currentPage = parseInt(pathParts[4]) || 1; // The :page parameter
+
+                // Map path keys to the variables your API expects
+                const searchQuery = filterType === "q" ? filterValue : null;
+                const yearQuery = filterType === "year" ? filterValue : null;
+                const typeQuery = filterType === "type" ? filterValue : null;
+                const genreQuery = filterType === "genre" ? filterValue : null;
 
                 function getDisplayLabel() {
                     if (searchQuery) return `Results for: ${searchQuery}`;
                     if (genreQuery) return `Genre: ${genreQuery}`;
-                    if (typeQuery) return `Type: ${typeQuery}`;
+                    if (typeQuery)
+                        return `Type: ${typeQuery.replace(/-/g, " ")}`;
                     if (yearQuery) return `Year: ${yearQuery}`;
                     return "Results";
                 }
 
                 // Initial Search Call
-                if (searchQuery || yearQuery || typeQuery || genreQuery) {
+                if (filterValue) {
                     $("#search-query").text(getDisplayLabel());
                     if (searchQuery) $("#search-field").val(searchQuery);
+
                     performSearch(
                         searchQuery,
                         yearQuery,
@@ -238,7 +246,8 @@
                     let apiUrl = `/api/novels/filter?page=${page}&limit=${limit}`;
                     if (query) apiUrl += `&search=${encodeURIComponent(query)}`;
                     if (year) apiUrl += `&year=${encodeURIComponent(year)}`;
-                    if (type) apiUrl += `&type=${encodeURIComponent(type)}`;
+                    if (type)
+                        apiUrl += `&type=${encodeURIComponent(type.replace(/-/g, " "))}`;
                     if (genre) apiUrl += `&genre=${encodeURIComponent(genre)}`;
 
                     $.ajax({
@@ -255,11 +264,8 @@
                             if (response.success && response.data.length > 0) {
                                 $errorBox.hide();
                                 $container.show();
-
-                                // Update the global totalPages from API
                                 totalPages = response.totalPages;
 
-                                // Render items
                                 response.data.forEach((novel) => {
                                     const dateObj = new Date(
                                         Number(novel.updatedAt) * 1000,
@@ -272,7 +278,7 @@
 
                                     const novelHtml = `
                                     <div class="result-item-wrapper" onclick="window.location.href='/page/${resultYear}/${novelSlug}'" style="cursor: pointer;">
-                                        <img  src="/proxy-image?url=${encodeURIComponent(novel.cover)}" onerror="this.onerror=null; this.src='${novel.cover}';" alt="${novel.title}" id="result-cover" />
+                                        <img src="/proxy-image?url=${encodeURIComponent(novel.cover)}" onerror="this.onerror=null; this.src='${novel.cover}';" alt="${novel.title}" id="result-cover" />
                                         <div class="result-card-info">
                                             <h1>${novel.title}</h1>
                                             <div class="result-card-badge">
@@ -287,71 +293,52 @@
                                     $container.append(novelHtml);
                                 });
 
-                                // --- Button Visibility Logic ---
-                                // Hide Prev if on Page 1
+                                // Update button visibility
                                 $prevBtn.css(
                                     "visibility",
                                     currentPage > 1 ? "visible" : "hidden",
                                 );
-                                // Hide Next if on Last Page
                                 $nextBtn.css(
                                     "visibility",
                                     currentPage < totalPages
                                         ? "visible"
                                         : "hidden",
                                 );
+
+                                // Update page indicator if you have one
+                                $("#current-page-info").text(
+                                    `Page ${currentPage} of ${totalPages}`,
+                                );
                             } else {
                                 $container.hide();
                                 $errorBox.show();
-                                $prevBtn.css("visibility", "hidden");
-                                $nextBtn.css("visibility", "hidden");
                             }
-                        },
-                        error: function () {
-                            $(".result-card-list").hide();
-                            $(".result-card-body").show();
                         },
                     });
                 }
 
-                // --- Click Handlers ---
-
+                // 3. New Click Handlers that update the URL
                 $(".prev-btn").on("click", function () {
                     if (currentPage > 1) {
-                        currentPage--;
-                        scrollToTop();
-                        performSearch(
-                            searchQuery,
-                            yearQuery,
-                            typeQuery,
-                            genreQuery,
-                            currentPage,
-                            pageLimit,
-                        );
+                        const newPage = currentPage - 1;
+                        const baseUrl = window.location.pathname
+                            .split("/")
+                            .slice(0, 4)
+                            .join("/");
+                        window.location.href = `${baseUrl}/${newPage}`;
                     }
                 });
 
                 $(".next-btn").on("click", function () {
                     if (currentPage < totalPages) {
-                        currentPage++;
-                        scrollToTop();
-                        performSearch(
-                            searchQuery,
-                            yearQuery,
-                            typeQuery,
-                            genreQuery,
-                            currentPage,
-                            pageLimit,
-                        );
+                        const newPage = currentPage + 1;
+                        const baseUrl = window.location.pathname
+                            .split("/")
+                            .slice(0, 4)
+                            .join("/");
+                        window.location.href = `${baseUrl}/${newPage}`;
                     }
                 });
-
-                function scrollToTop() {
-                    $("html, body").animate(
-                        { scrollTop: $(".result-header").offset().top - 20 },
-                        "fast",
-                    );
-                }
             });
         </script>
     </body>

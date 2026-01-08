@@ -3,20 +3,42 @@ const path = require("path");
 const cors = require("cors");
 
 const novelRouter = require("../sources/routers/routers");
-const fetch = require("node-fetch").default;
+// FIX 1: For node-fetch v2, you don't use .default
+const fetch = require("node-fetch");
 
 const app = express();
-const PORT = 3000;
 
-app.use(express.static(__dirname));
+// FIX 2: Vercel maps the root of your project differently.
+// Since index.js is in /api, the root is one level up.
+const root = path.join(__dirname, "..");
+
+app.use(express.static(root));
 app.use(cors());
 
 // Serve your main HTML file
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(root, "index.html"));
 });
+
 app.get("/page/:year/:slug", (req, res) => {
-  res.sendFile(path.join(__dirname, "page", "page.html"));
+  // Assuming page.html is in /page/ folder at the root
+  res.sendFile(path.join(root, "page", "page.html"));
+});
+
+app.get("/search/year/:year{/:page}", (req, res) => {
+  res.sendFile(path.join(root, "search.html")); // Use root, not __dirname
+});
+
+app.get("/search/type/:type{/:page}", (req, res) => {
+  res.sendFile(path.join(root, "search.html"));
+});
+
+app.get("/search/genre/:genre{/:page}", (req, res) => {
+  res.sendFile(path.join(root, "search.html"));
+});
+
+app.get("/search/q/:query{/:page}", (req, res) => {
+  res.sendFile(path.join(root, "search.html"));
 });
 
 app.get("/proxy-image", async (req, res) => {
@@ -42,6 +64,14 @@ app.get("/proxy-image", async (req, res) => {
 
 app.use("/api/novels", novelRouter);
 
-app.listen(PORT, "192.168.10.108", () => {
-  console.log(`Server running on http://192.168.10.108:${PORT}`);
-});
+// FIX 3: Vercel does not use app.listen().
+// It handles the port and IP automatically.
+// We only keep this for local testing.
+if (process.env.NODE_ENV !== "production") {
+  const PORT = 3000;
+  app.listen(PORT, () => {
+    console.log(`Server running locally on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;

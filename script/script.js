@@ -13,6 +13,18 @@ $(document).ready(function () {
     }
   });
 
+  $("#novel-search-form").on("submit", function (e) {
+    e.preventDefault(); // Stop the form from submitting normally (?search=...)
+
+    const query = $("#search-field").val().trim();
+
+    if (query) {
+      // Redirect to the clean URL format: /search/q/your-keyword/1
+      // We add /1 at the end to ensure it starts on the first page
+      window.location.href = `/search/q/${encodeURIComponent(query)}/1`;
+    }
+  });
+
   let positions = ["pos-1", "pos-2", "pos-3", "pos-4", "pos-5"];
   let autoRun;
 
