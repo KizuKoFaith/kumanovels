@@ -20,6 +20,9 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(root, "index.html"));
 });
 
+app.use("/style", express.static(path.join(root, "style")));
+app.use("/script", express.static(path.join(root, "script")));
+
 app.get("/page/:year/:slug", (req, res) => {
   // Assuming page.html is in /page/ folder at the root
   res.sendFile(path.join(root, "page", "page.html"));
