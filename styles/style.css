@@ -302,6 +302,7 @@ header .header-wrapper {
 }
 .post-wrapper {
     flex: 3;
+    min-width: 0;
 }
 .popular-post-wrapper {
     flex: 1;
@@ -1122,6 +1123,91 @@ header .header-wrapper {
     font-size: 0.85rem;
     font-weight: 500;
     border: 1px solid #dbeafe;
+}
+
+.page-series-wrapper {
+    width: 100%;
+    overflow: hidden; /* Prevent any accidental bleed */
+}
+
+/* Series Section Header */
+.series-list-title {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin: 40px 0 20px 0;
+    padding-left: 10px;
+    border-left: 4px solid var(--accent_color);
+}
+
+.page-series-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    width: 100%; /* Ensure it takes full available width */
+    padding: 10px 0 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent_color) transparent;
+    /* Optional: Improves scrolling on touch devices */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Card Design */
+.series-card {
+    flex: 0 0 160px; /* Fixed width for cards */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.series-card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.series-image-box {
+    width: 160px;
+    height: 230px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: #eee;
+}
+
+.series-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Shimmer Effect Logic --- */
+.shimmer {
+    background: #f6f7f8;
+    background-image: linear-gradient(
+        to right,
+        #f6f7f8 0%,
+        #edeef1 20%,
+        #f6f7f8 40%,
+        #f6f7f8 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 800px 100%;
+    display: inline-block;
+    position: relative;
+    animation: shimmerEffect 1.5s infinite linear;
+}
+
+@keyframes shimmerEffect {
+    0% {
+        background-position: -468px 0;
+    }
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+/* Placeholder for the image while loading */
+.series-card.is-loading .series-image-box {
+    border: none;
+    background-color: #eee;
 }
 
 /* Search */

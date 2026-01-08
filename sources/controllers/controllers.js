@@ -146,39 +146,51 @@ async function getLatestNovels(req, res) {
   }
 }
 
+function getAllVolumesBySlug(fullSlug, currentVolumeNumber) {
+  const [novelSlug] = fullSlug.split("-volume-");
+  const novel = BASE_DATA.data.find((n) => n.slug === novelSlug);
+
+  if (!novel) return [];
+
+  return novel.volumes
+    .filter((v) => v.volume !== currentVolumeNumber) // Exclude the current volume
+    .map((v) => ({
+      volume: v.volume,
+      slug: `${novel.slug}-volume-${v.volume}`,
+      cover: v.cover,
+    }))
+    .sort((a, b) => parseInt(a.volume) - parseInt(b.volume));
+}
+
 async function getSingleVolume(req, res) {
   try {
-    const { slug } = req.params; // e.g., "wandering-witch-...-volume-16"
+    const { slug } = req.params;
+    // Extract novelSlug (e.g. "wandering-witch...") and volumeNumber (e.g. "16")
+    const [novelSlug, volumeNumber] = slug.split("-volume-");
 
-    // 1. Find the base novel data from your local JSON
-    const novel = BASE_DATA.data.find((n) => slug.startsWith(n.slug));
-
+    const novel = BASE_DATA.data.find((n) => n.slug === novelSlug);
     if (!novel)
       return res
         .status(404)
         .send({ success: false, message: "Novel not found" });
 
-    // 2. Extract the volume part
-    const remainingPart = slug.replace(novel.slug, "");
-    const volumeSlug = remainingPart.replace("-volume-", "");
-    const selectedVolume = novel.volumes.find((v) => v.slug === volumeSlug);
-
+    const selectedVolume = novel.volumes.find((v) => v.volume === volumeNumber);
     if (!selectedVolume)
       return res
         .status(404)
         .send({ success: false, message: "Volume not found" });
 
-    // 3. CHANGE: Point the reference to the FULL SLUG (Novel + Volume)
-    const volumeEntryRef = db.ref(`novels/${slug}`);
+    // 1. Get siblings ONLY (passing volumeNumber to exclude it)
+    const otherVolumes = getAllVolumesBySlug(slug, volumeNumber);
 
+    const volumeEntryRef = db.ref(`novels/${slug}`);
     const { snapshot } = await volumeEntryRef.transaction((currentData) => {
       if (currentData === null) {
-        // Create a completely separate entry for this specific volume
         return {
           id: novel.originalId || novel.id,
           title: novel.title,
-          slug: slug, // This is now the full "novel-volume-X" slug
-          cover: selectedVolume.cover, // Specific volume cover
+          slug: slug,
+          cover: selectedVolume.cover,
           banner: novel.coverImage.banner,
           genres: novel.genres,
           additional_info: {
@@ -193,26 +205,26 @@ async function getSingleVolume(req, res) {
           volumes: {
             volume: selectedVolume.volume,
             cover: selectedVolume.cover,
-            synopsis: novel.additional_info.description,
+            synopsis: selectedVolume.synopsis,
             url: selectedVolume.url,
           },
         };
       } else {
-        // If this specific novel-volume combo exists, just increment visit_count
         currentData.additional_info.visit_count =
           (currentData.additional_info.visit_count || 0) + 1;
         return currentData;
       }
     });
 
-    const firebaseData = snapshot.val();
-
     return res.status(200).send({
       success: true,
-      data: firebaseData,
+      data: {
+        ...snapshot.val(),
+        series_volumes: otherVolumes, // Will contain all volumes EXCEPT the current one
+      },
     });
   } catch (error) {
-    console.error("Firebase Error:", error);
+    console.error("Error:", error);
     res.status(500).send({ success: false, message: "Server Error" });
   }
 }

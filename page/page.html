@@ -153,6 +153,16 @@
                                                 ></div>
                                             </div>
                                         </div>
+
+                                        <div class="page-series-wrapper">
+                                            <h3 class="series-list-title">
+                                                Volume Series
+                                            </h3>
+                                            <div
+                                                class="page-series-list"
+                                                id="series-list-container"
+                                            ></div>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -302,9 +312,24 @@
                         type: "GET",
                         dataType: "json", // Automatically parses JSON
                         success: function (result) {
+                            // 1. Before the AJAX starts, show 5 shimmer placeholders
+                            const shimmerPlaceholders = Array(5)
+                                .fill(
+                                    `
+                              <div class="series-card is-loading">
+                                  <div class="series-image-box shimmer"></div>
+                              </div>
+                          `,
+                                )
+                                .join("");
+                            $(".page-series-list").html(shimmerPlaceholders);
+
                             if (result.success) {
                                 const volumeData = result.data;
                                 currentNovelData = volumeData;
+                                const $seriesList = $(".page-series-list");
+
+                                $seriesList.empty();
 
                                 // Update Title & Breadcrumb
                                 $("#breadcramp-type").text(
@@ -387,6 +412,36 @@
                                         .empty()
                                         .append(genreHtml);
                                 }
+
+                                if (
+                                    volumeData.series_volumes &&
+                                    volumeData.series_volumes.length > 0
+                                ) {
+                                    $.each(
+                                        volumeData.series_volumes,
+                                        function (index, vol) {
+                                            const $card = $(`
+                                                <div class="series-card" title="${volumeData.title} Volume ${vol.volume}">
+                                                    <div class="series-image-box">
+                                                        <img src="/proxy-image?url=${encodeURIComponent(vol.cover)}"
+                                                             alt="Vol ${vol.volume}"
+                                                             loading="lazy" />
+                                                    </div>
+                                                </div>
+                                            `);
+
+                                            // Add click event to navigate to that volume
+                                            $card.on("click", function () {
+                                                // Assuming path is /year/slug
+                                                window.location.href = `/page/${year}/${vol.slug}`;
+                                            });
+
+                                            $seriesList.append($card);
+                                        },
+                                    );
+                                } else {
+                                    $(".page-series-wrapper").hide(); // Hide if no other volumes
+                                }
                             }
                         },
                         error: function (err) {
@@ -422,20 +477,24 @@
                     }
                 }
 
+                // 1. Create a variable outside the click handler to track state
+                let isProcessingFav = false;
+
                 $(".add-to-fav").on("click", function () {
+                    if (isProcessingFav) return;
+
                     const $btn = $(this);
                     let bookmarks =
                         JSON.parse(localStorage.getItem("kuma_bookmarks")) ||
                         [];
 
-                    // Check if it's already bookmarked
                     const existingIndex = bookmarks.findIndex(
                         (item) => item.slug === slug,
                     );
                     const isAlreadyBookmarked = existingIndex !== -1;
 
                     if (isAlreadyBookmarked) {
-                        // --- REMOVE LOGIC ---
+                        // --- REMOVE LOGIC (Local/Instant) ---
                         bookmarks.splice(existingIndex, 1);
                         localStorage.setItem(
                             "kuma_bookmarks",
@@ -443,7 +502,13 @@
                         );
                         $btn.css("color", "#fff");
                     } else {
-                        // --- ADD LOGIC ---
+                        // --- ADD LOGIC (Remote/API) ---
+                        isProcessingFav = true;
+
+                        // 1. DISABLE BUTTON HERE (Immediate)
+                        $btn.prop("disabled", true);
+                        $btn.css("opacity", "0.5");
+
                         fetch(`/api/novels/favorite/${slug}`, {
                             method: "POST",
                         })
@@ -465,9 +530,16 @@
                                         "kuma_bookmarks",
                                         JSON.stringify(bookmarks),
                                     );
-
                                     $btn.css("color", "red");
                                 }
+                            })
+                            .catch((err) => console.error("Error:", err))
+                            .finally(() => {
+                                isProcessingFav = false;
+
+                                // 2. RE-ENABLE BUTTON HERE (When finished)
+                                $btn.prop("disabled", false);
+                                $btn.css("opacity", "1");
                             });
                     }
                 });
