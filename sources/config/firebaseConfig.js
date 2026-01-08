@@ -1,23 +1,31 @@
 const admin = require("firebase-admin");
 const path = require("path");
-// Load .env from the project root
-require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
+
+// Only require dotenv in local development
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
+}
 
 let serviceAccount;
 
 try {
-  // Option A: Use the environment variable if it exists (for Production)
   if (process.env.FIREBASE_SERVICE_ACCOUNT_JSON) {
     serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON);
+    // Fix private key formatting for Vercel
+    if (serviceAccount.private_key) {
+      serviceAccount.private_key = serviceAccount.private_key.replace(
+        /\\n/g,
+        "\n",
+      );
+    }
   } else {
-    // Option B: Fallback to the local file (for Local Dev)
-    // This file is now ignored by git thanks to your .gitignore
+    // Local development path
     serviceAccount = require(
       path.resolve(__dirname, "./serviceAccountKey.json"),
     );
   }
 } catch (error) {
-  console.error("Failed to load Firebase credentials:", error);
+  console.error("Firebase credential load failed:", error.message);
 }
 
 if (!admin.apps.length && serviceAccount) {
@@ -27,5 +35,5 @@ if (!admin.apps.length && serviceAccount) {
   });
 }
 
-const db = admin.database();
-module.exports = db;
+// Export the database instance
+module.exports = admin.database();
