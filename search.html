@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kuma Novels</title>
+
+        <!-- Styles Css-->
+        <link rel="stylesheet" href="/styles/style.css" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <div class="header-wrapper">
+                    <div class="header-brand">
+                        <a href="/" id="header-brank-link">KumaNovel</a>
+                    </div>
+                    <div class="mobile-menu menu-btn show">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="header-nav-wrapper">
+                        <ul>
+                            <li><a href="/" id="item-list">Home</a></li>
+                            <li><a href="#" id="item-list">About</a></li>
+                            <li><a href="#" id="item-list">Contact</a></li>
+                            <li><a href="#" id="item-list">Login</a></li>
+                            <li>
+                                <form
+                                    action="/search.html"
+                                    method="GET"
+                                    class="search-form"
+                                >
+                                    <input
+                                        type="search"
+                                        name="search"
+                                        id="search-field"
+                                        placeholder="Search novel..."
+                                    />
+                                    <input type="submit" value="Search" />
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="main-container">
+                <div class="post-wrapper">
+                    <div class="result-card-wrapper">
+                        <div class="result-header">
+                            <h1>Search Result For</h1>
+                            <p id="search-query"></p>
+                        </div>
+
+                        <div class="result-card-body">
+                            <div class="result-card-error">
+                                <p>No Result Found. Please try again...</p>
+                            </div>
+                        </div>
+
+                        <div class="result-card-list"></div>
+
+                        <div class="result-pages">
+                            <div class="prev-btn">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="next-btn">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="popular-post-wrapper">
+                    <div class="popular-header-wrapper">
+                        <h1>Most Popular</h1>
+                    </div>
+                    <div id="popular-skeleton">
+                        <div class="popular-item-skeleton">
+                            <div class="skeleton-rank"></div>
+                            <div class="skeleton-thumb"></div>
+                            <div class="skeleton-info">
+                                <div class="skeleton-line title"></div>
+                                <div class="skeleton-line meta"></div>
+                            </div>
+                        </div>
+                        <div class="popular-item-skeleton">
+                            <div class="skeleton-rank"></div>
+                            <div class="skeleton-thumb"></div>
+                            <div class="skeleton-info">
+                                <div class="skeleton-line title"></div>
+                                <div class="skeleton-line meta"></div>
+                            </div>
+                        </div>
+                        <div class="popular-item-skeleton">
+                            <div class="skeleton-rank"></div>
+                            <div class="skeleton-thumb"></div>
+                            <div class="skeleton-info">
+                                <div class="skeleton-line title"></div>
+                                <div class="skeleton-line meta"></div>
+                            </div>
+                        </div>
+                        <div class="popular-item-skeleton">
+                            <div class="skeleton-rank"></div>
+                            <div class="skeleton-thumb"></div>
+                            <div class="skeleton-info">
+                                <div class="skeleton-line title"></div>
+                                <div class="skeleton-line meta"></div>
+                            </div>
+                        </div>
+                        <div class="popular-item-skeleton">
+                            <div class="skeleton-rank"></div>
+                            <div class="skeleton-thumb"></div>
+                            <div class="skeleton-info">
+                                <div class="skeleton-line title"></div>
+                                <div class="skeleton-line meta"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-wrapper"></div>
+                </aside>
+            </div>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-section about">
+                        <h2 class="footer-logo">KumaNovel</h2>
+                        <p class="footer-description">
+                            KumaNovel is your ultimate digital library for
+                            high-quality web novels and light novels. We
+                            specialize in providing clean, well-formatted
+                            <strong>EPUB</strong> and
+                            <strong>PDF</strong> files, allowing you to build
+                            your personal offline collection and read on any
+                            e-reader or mobile device.
+                        </p>
+                        <div class="footer-info-meta">
+                            <p>
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                                <strong>Unlimited</strong> Free Downloads
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                <strong>Optimized</strong> for Kindle & Mobile
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-box-archive"></i>
+                                <strong>Formats:</strong> EPUB, PDF, & MOBI
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footer-section links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Latest Updates</a></li>
+                            <li><a href="#">Popular Novels</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section disclaimer">
+                        <h3>Disclaimer</h3>
+                        <p>
+                            KumaNovel does not store any files on its server.
+                            All contents are provided by non-affiliated third
+                            parties. If you believe your copyrighted work is
+                            being used without permission, please contact us for
+                            immediate removal.
+                        </p>
+                    </div>
+
+                    <div class="footer-section social">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-facebook"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-discord"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-telegram"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-x-twitter"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Kuma Novels. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+
+        <script
+            src="https://kit.fontawesome.com/48699b744e.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="/script/script.js"></script>
+        <script>
+            $(document).ready(function () {
+                let currentPage = 1;
+                let pageLimit = 5;
+                let totalPages = 1; // Store this globally to use in click handlers
+
+                const urlParams = new URLSearchParams(window.location.search);
+                const searchQuery = urlParams.get("search");
+                const typeQuery = urlParams.get("type");
+                const genreQuery = urlParams.get("genre");
+                const yearQuery = urlParams.get("year");
+
+                function getDisplayLabel() {
+                    if (searchQuery) return `Results for: ${searchQuery}`;
+                    if (genreQuery) return `Genre: ${genreQuery}`;
+                    if (typeQuery) return `Type: ${typeQuery}`;
+                    if (yearQuery) return `Year: ${yearQuery}`;
+                    return "Results";
+                }
+
+                // Initial Search Call
+                if (searchQuery || yearQuery || typeQuery || genreQuery) {
+                    $("#search-query").text(getDisplayLabel());
+                    if (searchQuery) $("#search-field").val(searchQuery);
+                    performSearch(
+                        searchQuery,
+                        yearQuery,
+                        typeQuery,
+                        genreQuery,
+                        currentPage,
+                        pageLimit,
+                    );
+                }
+
+                function performSearch(query, year, type, genre, page, limit) {
+                    let apiUrl = `/api/novels/filter?page=${page}&limit=${limit}`;
+                    if (query) apiUrl += `&search=${encodeURIComponent(query)}`;
+                    if (year) apiUrl += `&year=${encodeURIComponent(year)}`;
+                    if (type) apiUrl += `&type=${encodeURIComponent(type)}`;
+                    if (genre) apiUrl += `&genre=${encodeURIComponent(genre)}`;
+
+                    $.ajax({
+                        url: apiUrl,
+                        type: "GET",
+                        success: function (response) {
+                            const $container = $(".result-card-list");
+                            const $errorBox = $(".result-card-body");
+                            const $prevBtn = $(".prev-btn");
+                            const $nextBtn = $(".next-btn");
+
+                            $container.empty();
+
+                            if (response.success && response.data.length > 0) {
+                                $errorBox.hide();
+                                $container.show();
+
+                                // Update the global totalPages from API
+                                totalPages = response.totalPages;
+
+                                // Render items
+                                response.data.forEach((novel) => {
+                                    const dateObj = new Date(
+                                        Number(novel.updatedAt) * 1000,
+                                    );
+                                    const resultYear = dateObj.getFullYear();
+                                    const volumeSlug = String(novel.volume)
+                                        .toLowerCase()
+                                        .replace(/\s+/g, "-");
+                                    const novelSlug = `${novel.slug}-volume-${volumeSlug}`;
+
+                                    const novelHtml = `
+                                    <div class="result-item-wrapper" onclick="window.location.href='/page/${resultYear}/${novelSlug}'" style="cursor: pointer;">
+                                        <img  src="/proxy-image?url=${encodeURIComponent(novel.cover)}" onerror="this.onerror=null; this.src='${novel.cover}';" alt="${novel.title}" id="result-cover" />
+                                        <div class="result-card-info">
+                                            <h1>${novel.title}</h1>
+                                            <div class="result-card-badge">
+                                                <span>${novel.status}</span>
+                                                <span>${novel.type}</span>
+                                            </div>
+                                            <div class="result-card-description">
+                                                <p>${novel.description}</p>
+                                            </div>
+                                        </div>
+                                    </div>`;
+                                    $container.append(novelHtml);
+                                });
+
+                                // --- Button Visibility Logic ---
+                                // Hide Prev if on Page 1
+                                $prevBtn.css(
+                                    "visibility",
+                                    currentPage > 1 ? "visible" : "hidden",
+                                );
+                                // Hide Next if on Last Page
+                                $nextBtn.css(
+                                    "visibility",
+                                    currentPage < totalPages
+                                        ? "visible"
+                                        : "hidden",
+                                );
+                            } else {
+                                $container.hide();
+                                $errorBox.show();
+                                $prevBtn.css("visibility", "hidden");
+                                $nextBtn.css("visibility", "hidden");
+                            }
+                        },
+                        error: function () {
+                            $(".result-card-list").hide();
+                            $(".result-card-body").show();
+                        },
+                    });
+                }
+
+                // --- Click Handlers ---
+
+                $(".prev-btn").on("click", function () {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        scrollToTop();
+                        performSearch(
+                            searchQuery,
+                            yearQuery,
+                            typeQuery,
+                            genreQuery,
+                            currentPage,
+                            pageLimit,
+                        );
+                    }
+                });
+
+                $(".next-btn").on("click", function () {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        scrollToTop();
+                        performSearch(
+                            searchQuery,
+                            yearQuery,
+                            typeQuery,
+                            genreQuery,
+                            currentPage,
+                            pageLimit,
+                        );
+                    }
+                });
+
+                function scrollToTop() {
+                    $("html, body").animate(
+                        { scrollTop: $(".result-header").offset().top - 20 },
+                        "fast",
+                    );
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+# Security: Ignore the environment variables file
+.env
+
+# Security: Ignore the Firebase service account key specifically
+serviceAccountKey.json
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
