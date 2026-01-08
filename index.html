@@ -1,238 +1,255 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Kuma Novels</title>
 
-        <!-- Styles Css-->
-        <link rel="stylesheet" href="/styles/style.css" />
-    </head>
-    <body>
-        <main>
-            <header>
-                <div class="header-wrapper">
-                    <div class="header-brand">
-                        <a href="index.html" id="header-brank-link"
-                            >KumaNovel</a
-                        >
-                    </div>
-                    <div class="mobile-menu menu-btn show">
-                        <i class="fa-solid fa-bars"></i>
-                    </div>
-                    <div class="header-nav-wrapper">
-                        <ul>
-                            <li><a href="#" id="item-list">Home</a></li>
-                            <li><a href="#" id="item-list">About</a></li>
-                            <li><a href="#" id="item-list">Contact</a></li>
-                            <li><a href="#" id="item-list">Login</a></li>
-                            <li>
-                                <form
-                                    id="novel-search-form"
-                                    method="GET"
-                                    class="search-form"
-                                >
-                                    <input
-                                        type="search"
-                                        name="search"
-                                        id="search-field"
-                                        placeholder="Search novel..."
-                                    />
-                                    <input type="submit" value="Search" />
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuma Novels</title>
+    
+    <!-- Styles Css-->
+    <link rel="stylesheet" href="/styles/style.css" />
+    <!-- Adsterra Native Ad -->
+    <script async="async" data-cfasync="false" src="https://openairtowhardworking.com/8c06b9547abbe5f11d6b56a46b417557/invoke.js"></script>
+    <script src="https://openairtowhardworking.com/94/a4/ed/94a4ed06afd1d59950426f0b20679f9b.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="header-wrapper">
+                <div class="header-brand">
+                    <a href="index.html" id="header-brank-link">KumaNovel</a>
                 </div>
-            </header>
-
-            <div class="slider-container">
-                <button class="slider-btn prev" id="btnPrev">&#10094;</button>
-
-                <div class="slider-stage" id="kumaStage"></div>
-
-                <button class="slider-btn next" id="btnNext">&#10095;</button>
-
-                <div class="slider-indicators" id="indicators">
-                    <span class="dot active" data-index="0"></span>
-                    <span class="dot" data-index="1"></span>
-                    <span class="dot" data-index="2"></span>
-                    <span class="dot" data-index="3"></span>
-                    <span class="dot" data-index="4"></span>
+                <div class="mobile-menu menu-btn show">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="header-nav-wrapper">
+                    <ul>
+                        <li><a href="#" id="item-list">Home</a></li>
+                        <li><a href="#" id="item-list">About</a></li>
+                        <li><a href="#" id="item-list">Contact</a></li>
+                        <li><a href="#" id="item-list">Login</a></li>
+                        <li>
+                            <form id="novel-search-form" method="GET" class="search-form">
+                                <input type="search" name="search" id="search-field" placeholder="Search novel..." />
+                                <input type="submit" value="Search" />
+                            </form>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="main-container">
-                <div class="post-wrapper">
-                    <div class="post-header-wrapper">
-                        <h1>Latest Updates</h1>
-                        <div class="post-header-pages">
-                            <div class="prev-btn">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                            <div class="next-btn">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post-container">
-                        <ul id="post-list-wrapper"></ul>
-                    </div>
-                </div>
-                <aside class="popular-post-wrapper">
-                    <div class="popular-header-wrapper">
-                        <h1>Most Popular</h1>
-                    </div>
-                    <div id="popular-skeleton">
-                        <div class="popular-item-skeleton">
-                            <div class="skeleton-rank"></div>
-                            <div class="skeleton-thumb"></div>
-                            <div class="skeleton-info">
-                                <div class="skeleton-line title"></div>
-                                <div class="skeleton-line meta"></div>
-                            </div>
-                        </div>
-                        <div class="popular-item-skeleton">
-                            <div class="skeleton-rank"></div>
-                            <div class="skeleton-thumb"></div>
-                            <div class="skeleton-info">
-                                <div class="skeleton-line title"></div>
-                                <div class="skeleton-line meta"></div>
-                            </div>
-                        </div>
-                        <div class="popular-item-skeleton">
-                            <div class="skeleton-rank"></div>
-                            <div class="skeleton-thumb"></div>
-                            <div class="skeleton-info">
-                                <div class="skeleton-line title"></div>
-                                <div class="skeleton-line meta"></div>
-                            </div>
-                        </div>
-                        <div class="popular-item-skeleton">
-                            <div class="skeleton-rank"></div>
-                            <div class="skeleton-thumb"></div>
-                            <div class="skeleton-info">
-                                <div class="skeleton-line title"></div>
-                                <div class="skeleton-line meta"></div>
-                            </div>
-                        </div>
-                        <div class="popular-item-skeleton">
-                            <div class="skeleton-rank"></div>
-                            <div class="skeleton-thumb"></div>
-                            <div class="skeleton-info">
-                                <div class="skeleton-line title"></div>
-                                <div class="skeleton-line meta"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popular-wrapper"></div>
-                </aside>
+        </header>
+        
+        <div class="slider-container">
+            <button class="slider-btn prev" id="btnPrev">&#10094;</button>
+            
+            <div class="slider-stage" id="kumaStage"></div>
+            
+            <button class="slider-btn next" id="btnNext">&#10095;</button>
+            
+            <div class="slider-indicators" id="indicators">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
             </div>
-            <div class="favorite-wrapper">
-                <div class="fav-header-wrapper">
-                    <h1>Most Favorited</h1>
-                </div>
-
-                <div id="fav-skeleton-wrapper" class="fav-grid">
-                    <div class="fav-skeleton-card">
-                        <div class="skeleton-image-box shimmer"></div>
-                        <div class="skeleton-content-box">
-                            <div class="skeleton-text title shimmer"></div>
-                            <div class="skeleton-text meta shimmer"></div>
-                            <div class="skeleton-text desc shimmer"></div>
+        </div>
+        <!-- Native Banner Ad -->
+        <div id="container-8c06b9547abbe5f11d6b56a46b417557"></div>
+        <div class="main-container">
+            <div class="post-wrapper">
+                <div class="post-header-wrapper">
+                    <h1>Latest Updates</h1>
+                    <div class="post-header-pages">
+                        <div class="prev-btn">
+                            <i class="fa-solid fa-chevron-left"></i>
                         </div>
-                    </div>
-                    <div class="fav-skeleton-card">
-                        <div class="skeleton-image-box shimmer"></div>
-                        <div class="skeleton-content-box">
-                            <div class="skeleton-text title shimmer"></div>
-                            <div class="skeleton-text meta shimmer"></div>
-                            <div class="skeleton-text desc shimmer"></div>
+                        <div class="next-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
                         </div>
                     </div>
                 </div>
-
-                <ul id="fav-list-wrapper" class="fav-grid hidden"></ul>
+                <div class="post-container">
+                    <ul id="post-list-wrapper"></ul>
+                    <!-- Banner Ad -->
+                    <script>
+                        atOptions = {
+                            'key': 'd728a97b32e488c47bb3d5d629f31e0b',
+                            'format': 'iframe',
+                            'height': 60,
+                            'width': 468,
+                            'params': {}
+                        };
+                    </script>
+                </div>
             </div>
-            <footer>
-                <div class="footer-container">
-                    <div class="footer-section about">
-                        <h2 class="footer-logo">KumaNovel</h2>
-                        <p class="footer-description">
-                            KumaNovel is your ultimate digital library for
-                            high-quality web novels and light novels. We
-                            specialize in providing clean, well-formatted
-                            <strong>EPUB</strong> and
-                            <strong>PDF</strong> files, allowing you to build
-                            your personal offline collection and read on any
-                            e-reader or mobile device.
-                        </p>
-                        <div class="footer-info-meta">
-                            <p>
-                                <i class="fa-solid fa-file-arrow-down"></i>
-                                <strong>Unlimited</strong> Free Downloads
-                            </p>
-                            <p>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                                <strong>Optimized</strong> for Kindle & Mobile
-                            </p>
-                            <p>
-                                <i class="fa-solid fa-box-archive"></i>
-                                <strong>Formats:</strong> EPUB, PDF, & MOBI
-                            </p>
+            <aside class="popular-post-wrapper">
+                <div class="popular-header-wrapper">
+                    <h1>Most Popular</h1>
+                </div>
+                <div id="popular-skeleton">
+                    <div class="popular-item-skeleton">
+                        <div class="skeleton-rank"></div>
+                        <div class="skeleton-thumb"></div>
+                        <div class="skeleton-info">
+                            <div class="skeleton-line title"></div>
+                            <div class="skeleton-line meta"></div>
                         </div>
                     </div>
-
-                    <div class="footer-section links">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Latest Updates</a></li>
-                            <li><a href="#">Popular Novels</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
+                    <div class="popular-item-skeleton">
+                        <div class="skeleton-rank"></div>
+                        <div class="skeleton-thumb"></div>
+                        <div class="skeleton-info">
+                            <div class="skeleton-line title"></div>
+                            <div class="skeleton-line meta"></div>
+                        </div>
                     </div>
-
-                    <div class="footer-section disclaimer">
-                        <h3>Disclaimer</h3>
+                    <div class="popular-item-skeleton">
+                        <div class="skeleton-rank"></div>
+                        <div class="skeleton-thumb"></div>
+                        <div class="skeleton-info">
+                            <div class="skeleton-line title"></div>
+                            <div class="skeleton-line meta"></div>
+                        </div>
+                    </div>
+                    <div class="popular-item-skeleton">
+                        <div class="skeleton-rank"></div>
+                        <div class="skeleton-thumb"></div>
+                        <div class="skeleton-info">
+                            <div class="skeleton-line title"></div>
+                            <div class="skeleton-line meta"></div>
+                        </div>
+                    </div>
+                    <div class="popular-item-skeleton">
+                        <div class="skeleton-rank"></div>
+                        <div class="skeleton-thumb"></div>
+                        <div class="skeleton-info">
+                            <div class="skeleton-line title"></div>
+                            <div class="skeleton-line meta"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-wrapper"></div>
+                <!-- Banner Ad -->
+                <script>
+                    atOptions = {
+                        'key': 'd728a97b32e488c47bb3d5d629f31e0b',
+                        'format': 'iframe',
+                        'height': 60,
+                        'width': 468,
+                        'params': {}
+                    };
+                </script>
+            </aside>
+        </div>
+        <!-- Native Banner Ad -->
+        <div id="container-8c06b9547abbe5f11d6b56a46b417557"></div>
+        <div class="favorite-wrapper">
+            <div class="fav-header-wrapper">
+                <h1>Most Favorited</h1>
+            </div>
+            
+            <div id="fav-skeleton-wrapper" class="fav-grid">
+                <div class="fav-skeleton-card">
+                    <div class="skeleton-image-box shimmer"></div>
+                    <div class="skeleton-content-box">
+                        <div class="skeleton-text title shimmer"></div>
+                        <div class="skeleton-text meta shimmer"></div>
+                        <div class="skeleton-text desc shimmer"></div>
+                    </div>
+                </div>
+                <div class="fav-skeleton-card">
+                    <div class="skeleton-image-box shimmer"></div>
+                    <div class="skeleton-content-box">
+                        <div class="skeleton-text title shimmer"></div>
+                        <div class="skeleton-text meta shimmer"></div>
+                        <div class="skeleton-text desc shimmer"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <ul id="fav-list-wrapper" class="fav-grid hidden"></ul>
+            <!-- Banner Ad -->
+            <script>
+                atOptions = {
+                    'key': 'd728a97b32e488c47bb3d5d629f31e0b',
+                    'format': 'iframe',
+                    'height': 60,
+                    'width': 468,
+                    'params': {}
+                };
+            </script>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section about">
+                    <h2 class="footer-logo">KumaNovel</h2>
+                    <p class="footer-description">
+                        KumaNovel is your ultimate digital library for
+                        high-quality web novels and light novels. We
+                        specialize in providing clean, well-formatted
+                        <strong>EPUB</strong> and
+                        <strong>PDF</strong> files, allowing you to build
+                        your personal offline collection and read on any
+                        e-reader or mobile device.
+                    </p>
+                    <div class="footer-info-meta">
                         <p>
-                            KumaNovel does not store any files on its server.
-                            All contents are provided by non-affiliated third
-                            parties. If you believe your copyrighted work is
-                            being used without permission, please contact us for
-                            immediate removal.
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <strong>Unlimited</strong> Free Downloads
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <strong>Optimized</strong> for Kindle & Mobile
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-box-archive"></i>
+                            <strong>Formats:</strong> EPUB, PDF, & MOBI
                         </p>
                     </div>
-
-                    <div class="footer-section social">
-                        <h3>Follow Us</h3>
-                        <div class="social-links">
-                            <a href="#" class="social-icon"
-                                ><i class="fa-brands fa-facebook"></i
-                            ></a>
-                            <a href="#" class="social-icon"
-                                ><i class="fa-brands fa-discord"></i
-                            ></a>
-                            <a href="#" class="social-icon"
-                                ><i class="fa-brands fa-telegram"></i
-                            ></a>
-                            <a href="#" class="social-icon"
-                                ><i class="fa-brands fa-x-twitter"></i
-                            ></a>
-                        </div>
+                </div>
+                
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Latest Updates</a></li>
+                        <li><a href="#">Popular Novels</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section disclaimer">
+                    <h3>Disclaimer</h3>
+                    <p>
+                        KumaNovel does not store any files on its server.
+                        All contents are provided by non-affiliated third
+                        parties. If you believe your copyrighted work is
+                        being used without permission, please contact us for
+                        immediate removal.
+                    </p>
+                </div>
+                
+                <div class="footer-section social">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2026 Kuma Novels. All rights reserved.</p>
-                </div>
-            </footer>
-        </main>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kuma Novels. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+    
+    <script src="https://kit.fontawesome.com/48699b744e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/script/script.js"></script>
+</body>
 
-        <script
-            src="https://kit.fontawesome.com/48699b744e.js"
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="/script/script.js"></script>
-    </body>
 </html>
