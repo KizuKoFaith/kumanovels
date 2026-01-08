@@ -2,7 +2,7 @@
 .env
 
 # Security: Ignore the Firebase service account key specifically
-serviceAccountKey.json
+sources/config/serviceAccountKey.json
 
 # Dependencies
 node_modules/
