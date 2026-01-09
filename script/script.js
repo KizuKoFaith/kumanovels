@@ -164,6 +164,7 @@ $(document).ready(function () {
 
   let currentPage = 1;
   const itemsLimit = 10;
+  let totalPages = 1;
 
   function formatRelativeTime(timestamp) {
     // Convert seconds to milliseconds
@@ -184,11 +185,6 @@ $(document).ready(function () {
       { name: "minute", seconds: 60 },
     ];
 
-    // 3. Special Case: Yesterday
-    if (diffInSeconds >= 86400 && diffInSeconds < 172800) {
-      return "yesterday";
-    }
-
     // 4. Loop through units to find the match
     for (const unit of units) {
       const interval = Math.floor(diffInSeconds / unit.seconds);
@@ -202,6 +198,10 @@ $(document).ready(function () {
 
   function fetchLatestNovels(page = 1, limit = 10) {
     const $postList = $("#post-list-wrapper");
+    const $prevBtn = $(".prev-btn");
+    const $nextBtn = $(".next-btn");
+
+    currentPage = page;
 
     $.ajax({
       url: `/api/novels/latest?page=${page}&limit=${limit}`,
@@ -209,6 +209,7 @@ $(document).ready(function () {
       success: function (response) {
         const result =
           typeof response === "string" ? JSON.parse(response) : response;
+        totalPages = response.totalPages;
 
         $postList.empty();
 
@@ -226,6 +227,12 @@ $(document).ready(function () {
                       </div>
                   </li>
               `);
+
+          $prevBtn.css("visibility", currentPage > 1 ? "visible" : "hidden");
+          $nextBtn.css(
+            "visibility",
+            currentPage < totalPages ? "visible" : "hidden",
+          );
 
           $card
             .find("img")
@@ -266,6 +273,19 @@ $(document).ready(function () {
   }
 
   fetchLatestNovels(currentPage, itemsLimit);
+
+  // Click Handlers
+  $(".prev-btn").on("click", function () {
+    if (currentPage > 1) {
+      fetchLatestNovels(currentPage - 1, itemsLimit);
+    }
+  });
+
+  $(".next-btn").on("click", function () {
+    if (currentPage < totalPages) {
+      fetchLatestNovels(currentPage + 1, itemsLimit);
+    }
+  });
 
   function fetchPopularNovels() {
     // 1. Show skeleton, hide content (optional if already in HTML)

@@ -239,7 +239,7 @@
                 const genreQuery = filterType === "genre" ? filterValue : null;
 
                 function getDisplayLabel() {
-                    if (searchQuery) return `Results for: ${searchQuery}`;
+                    if (searchQuery) return `Series: ${searchQuery}`;
                     if (genreQuery) return `Genre: ${genreQuery}`;
                     if (typeQuery)
                         return `Type: ${typeQuery.replace(/-/g, " ")}`;
