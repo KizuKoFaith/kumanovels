@@ -292,6 +292,14 @@ header .header-wrapper {
     background-color: var(--card-bg);
 }
 
+/* AD Container */
+.ad-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
 /* Main Container */
 .main-container {
     max-width: 1300px;
