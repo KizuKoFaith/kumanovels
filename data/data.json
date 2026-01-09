@@ -1,6 +1,104 @@
 {
   "data": [
     {
+      "id": "15",
+      "title": "Brunhild the Dragonslayer",
+      "coverImage": {
+        "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2024/05/Brunhild-the-Dragonslayer.jpg?w=500&ssl=1",
+        "banner": "https://yenpress.com/uploads/Brunhild-LN-HeroM.jpg"
+      },
+      "additional_info": {
+        "author": "Yuiko Agarizaki",
+        "status": "Releasing",
+        "type": "Light Novel",
+        "updatedAt": "1767928337",
+        "description": "Eden… A place of perfection… A place where man and beast live side by side in harmony… Eden’s protector, the silver dragon, regularly visits retribution upon those who would bring harm to paradise. But when the dragon discovers a human girl on the shores of Eden, he decides to raise her as his own. He teaches her that if she is to be welcomed into God’s Kingdom after death, she must not harbor hatred in her heart. But when the dragon’s life is mercilessly snuffed out by human machinations, the girl must choose whether to heed the dragon’s dying wish and stay the course of righteousness…or walk a path of vengeance."
+      },
+      "genres": ["Action", "Adventure", "Fantasy"],
+      "source": {
+        "url": "https://yenpress.com/series/brunhild-the-dragonslayer",
+        "name": "Yen Press"
+      },
+      "volumes": [
+        {
+          "volume": "4",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2025/12/Brunhild-Vol.-4-the-Kings-Sister.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/13VkSaj72WbgkkUNK0B6OAVYzgR3mG6VR/view?usp=drive_link",
+          "synopsis": "It has been a century since anyone in the Siegfried clan was born with the Power of God. Desperate to keep their grip on the crown, the royal family resorts to sending its scions to a clandestine laboratory once they turn eight in hopes the brutal experiments conducted there will awaken the children to the family’s latent abilities. When it comes time for Sigurd, first in line for the throne, to undergo the procedures, there is but one thing on his mind: He must manifest the Power of God to spare his five-year-old sister Brunhild the same fate. Though Sigurd triumphantly returns three years later, bearing unprecedented command over the Power of God, the kind brother Brunhild knew is gone, replaced by a violent boy who has forgotten his own identity. Eventually, Sigurd grows tired of Brunhild and banishes her, only to call her back to the royal palace when she awakens to divine abilities of her own. Now betrothed to her brother, Brunhild must find a way to placate the unstable prince if she is to have any chance of surviving…"
+        },
+        {
+          "volume": "3",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2025/03/Brunhild-v03-and-Kriemhild.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1XiZFOQPDT-dfgpboKjFdW7Ea7VjAH4Yx/view?usp=drive_link",
+          "synopsis": "A century ago, the divine dragon sealed away the Dragon-Slaying Queen as revenge against the kingdom. But through the dedication of the queen’s successors, the kingdom has enjoyed great prosperity. Kriemhild, the daughter of the fifth queen, ascends to the throne with the same determination to protect the kingdom. Her elder sister Brunhild fell victim to the corruption of divine power, much like predecessors. Bearing that burden, Kriemhild steps into the throne room. But what awaits her is the kingdom’s greatest darkness, known only to those who become queens."
+        },
+        {
+          "volume": "2",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2024/09/Brunhild-v02-the-Dragon-Princess.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1hftzuhVivA09zwH3B2vnvfdo4bokfoLo/view?usp=drive_link",
+          "synopsis": "She was called the Dragon Princess by her people, sometimes with contempt, and sometimes with reverence. But 700 years before the Empire’s cannon pierced the dragon’s breast, there was another girl. Threatened by an evil dragon, the people of a small kingdom formed a pact with a Divine Dragon and flourished under its protection. Brunhild is born into the house of the Dragon Priestesses—the only ones in the land who can understand the dragon’s words. Like her mother and her mother’s mother before her, she serves the Divine Dragon, cleaning his temple, listening to his sacred words, and gratefully offering him tribute: seven people every month."
+        },
+        {
+          "volume": "1",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2024/05/Brunhild-the-Dragonslayer.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1UmKT9xWqWy4L61hHq8LK7zWQc61JIula/view?usp=drive_link",
+          "synopsis": "Eden… A place of perfection… A place where man and beast live side by side in harmony… Eden’s protector, the silver dragon, regularly visits retribution upon those who would bring harm to paradise. But when the dragon discovers a human girl on the shores of Eden, he decides to raise her as his own. He teaches her that if she is to be welcomed into God’s Kingdom after death, she must not harbor hatred in her heart. But when the dragon’s life is mercilessly snuffed out by human machinations, the girl must choose whether to heed the dragon’s dying wish and stay the course of righteousness…or walk a path of vengeance."
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "A Certain Magical Index NT",
+      "coverImage": {
+        "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2023/12/A-Certain-Magical-Index-NT-v01.jpg?w=500&ssl=1",
+        "banner": "https://yenpress.com/uploads/ACMI-NT-banner-mobile-R4.jpg"
+      },
+      "additional_info": {
+        "author": "Kazuma Kamachi",
+        "status": "Releasing",
+        "type": "Light Novel",
+        "updatedAt": "1767927741",
+        "description": "A short-lived respite…After bringing an end to World War III, Touma Kamijou disappears from the world. Both sides—magic and science—take time to rest and regroup. Accelerator distances himself from his troubled past and adjusts to living an ordinary life with Last Order and Misaka Worst. Meanwhile, Shiage Hamazura uses the secrets he gained in Russia as a bargaining chip and returns to Academy City to re-form Item. It seems like peace is here at last. That is, until a new group called the Freshmen bursts on the scene, forcing Accelerator and Hamazura back into contact with Academy City’s underworld…"
+      },
+      "genres": ["Action", "Comedy", "Fantasy", " Sci-Fi"],
+      "source": {
+        "url": "https://yenpress.com/series/a-certain-magical-index-nt-light-novel",
+        "name": "Yen Press"
+      },
+      "volumes": [
+        {
+          "volume": "5",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2025/12/A-Certain-Magical-Index-NT-Vol.-5.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1q4TS32aOxn092BnagFYxOdKHXcfg6BL3/view?usp=drive_link",
+          "synopsis": "Hot on the heels of the crisis in Baggage City, Touma Kamijou returns to Academy City to find the entire student population scrambling to finish preparing for the Ichihanaran Festival, a cultural celebration of massive proportions where schools can attract prospective students. Though Kamijou wants nothing more than to reunite with Index and Mikoto and to go back to his everyday routine, his hopes of returning to normalcy are dashed when one of his most powerful foes appears before him. A few shocking revelations later, Kamijou winds up joining forces with Thor, Gremlin’s combat specialist, to rescue a woman with mysterious powers from Academy City custody before the rest of Gremlin—and Ollerus’s faction—can get their hands on her. But with so many antagonistic parties in the mix, does Kamijou have any chance of avoiding manipulation again?"
+        },
+        {
+          "volume": "4",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2025/03/A-Certain-Magical-Index-NT-v04.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1OW0f6Q_RmWD9hBGwYjrXwiWNB1es5jbv/view?usp=drive_link",
+          "synopsis": "In the fallout of the attack on Hawaii, the twenty-seven partner corporations that broke away from Academy City announce that they will be hosting “Natural Selector,” a combat tournament in Eastern Europe. By holding the event, the Anti-Academy City faction hopes to prove the existence of powers that surpass psychic abilities, thereby destroying the identity of Academy City. With the help of Gremlin, an organization that merges magic and science, their scheme gets underway. Will Academy City be able to stop them before it’s too late?"
+        },
+        {
+          "volume": "3",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2024/09/A-Certain-Magical-Index-NT-v03.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1vODkSpE7Z76XlLz01qdqaKrKoa86DZVh/view?usp=drive_link",
+          "synopsis": "Gremlin, a belligerent organization merging magic and science that formed after WWIII, is operating behind the scenes in Hawaii. Under the guidance of Leivinia, leader of Dawn-Colored Sunlight, Touma Kamijou, Mikoto Misaka, Accelerator, Shiage Hamazura, Misaka Worst, and Umidori Kuroyoru head to America’s 50th state. But no sooner do they land at New Honolulu International Airport than Gremlin springs a surprise attack on them. Fortunately for Kamijou and company, one man has already clued into Gremlin’s schemes and is trying to take them down himself—Roberto Katze, the President of the United States!"
+        },
+        {
+          "volume": "2",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2024/05/a-certain-magical-index-nt.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1UFnZzn7eyj-iQ7r5cZQL5-diBsFuFwvL/view?usp=drive_link",
+          "synopsis": "As the dust settles from their encounter with the Freshman, Touma Kamijou, Shiage Hamazura, and Accelerator finally cross paths in Academy City. It won’t be long before these three find themselves with yet another challenge on their hands—explaining what the heck they’ve been doing to everyone who was worried about them! The boys have survived more than one scrape with death but it’s anyone’s guess if they’ll live through this…"
+        },
+        {
+          "volume": "1",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2023/12/A-Certain-Magical-Index-NT-v01.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1VWeCFaQZK_CWS5TiyN9V3Mn5eAXkWk8z/view?usp=drive_link",
+          "synopsis": "A short-lived respite…After bringing an end to World War III, Touma Kamijou disappears from the world. Both sides—magic and science—take time to rest and regroup. Accelerator distances himself from his troubled past and adjusts to living an ordinary life with Last Order and Misaka Worst. Meanwhile, Shiage Hamazura uses the secrets he gained in Russia as a bargaining chip and returns to Academy City to re-form Item. It seems like peace is here at last. That is, until a new group called the Freshmen bursts on the scene, forcing Accelerator and Hamazura back into contact with Academy City’s underworld…"
+        }
+      ]
+    },
+    {
       "id": "13",
       "title": "The Fruit of Evolution: Before I Knew It My Life Had It Made",
       "coverImage": {
