@@ -114,7 +114,9 @@
                                                 <i
                                                     class="fa-solid fa-cloud-arrow-down"
                                                 ></i>
-                                                Get Ebook
+                                                <span id="btn-text"
+                                                    >Get Ebook</span
+                                                >
                                             </a>
                                         </div>
 
@@ -418,11 +420,73 @@
                                     .text(volumeData.source.name)
                                     .attr("href", volumeData.source.url);
 
-                                // Fill Download Link
-                                $("#download-link").attr(
-                                    "href",
-                                    volumeData.volumes.url,
-                                );
+                                let originalUrl = volumeData.volumes.url;
+
+                                // 2. Extract the ID and create the Direct Download Link
+                                // This regex looks for the string between /d/ and /view
+                                let driveId = originalUrl.match(/\/d\/(.+?)\//);
+                                let directDownloadUrl = driveId
+                                    ? `https://drive.google.com/uc?export=download&id=${driveId[1]}`
+                                    : originalUrl;
+
+                                const adUrl =
+                                    "https://openairtowhardworking.com/wijc7tkm?key=876f1150504b3eaf4c912323072e0ac9";
+
+                                $("#download-link").on("click", function (e) {
+                                    const $link = $(this);
+                                    const $text = $("#btn-text");
+
+                                    if ($link.hasClass("is-ready")) {
+                                        return; // Allow the direct download to happen
+                                    }
+
+                                    e.preventDefault();
+
+                                    // Open Adsterra Smart Link
+                                    window.open(adUrl, "_blank");
+
+                                    // Start Countdown
+                                    let counter = 5;
+                                    $link.css({
+                                        "pointer-events": "none",
+                                        opacity: "0.7",
+                                    });
+                                    $text.text(
+                                        "Preparing Link... " + counter + "s",
+                                    );
+
+                                    const countdownInterval = setInterval(
+                                        function () {
+                                            counter--;
+                                            if (counter > 0) {
+                                                $text.text(
+                                                    "Preparing Link... " +
+                                                        counter +
+                                                        "s",
+                                                );
+                                            } else {
+                                                clearInterval(
+                                                    countdownInterval,
+                                                );
+
+                                                // Finalize Button
+                                                $text.text(
+                                                    "Download Ebook Now",
+                                                );
+                                                $link.attr(
+                                                    "href",
+                                                    directDownloadUrl,
+                                                ); // Set the Direct Download URL
+                                                $link.addClass("is-ready");
+                                                $link.css({
+                                                    "pointer-events": "auto",
+                                                    opacity: "1",
+                                                });
+                                            }
+                                        },
+                                        1000,
+                                    );
+                                });
 
                                 // Render Genres with Clickable Links
                                 if (
