@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Terms & Privacy - Kuma Novels</title>
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://kumanovels.vercel.app/" />
+        <meta
+            property="og:title"
+            content="KumaNovels | Download High-Quality Web & Light Novels"
+        />
+        <meta
+            property="og:description"
+            content="Collect your favorite ebook with clean, well-formatted EPUB and PDF web & light novels and read anywhere, on any device."
+        />
+        <meta property="og:image" content="/images/icon_logo.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="KumaNovels - Your Digital Light Novel Library"
+        />
+        <meta
+            name="twitter:description"
+            content="Download high-quality EPUBs and PDFs of your favorite web & light novels for offline reading."
+        />
+        <meta name="twitter:image" content="/images/icon_logo.jpg" />
+
+        <meta
+            name="keywords"
+            content="web novels, light novels, EPUB download, PDF download, offline reading, digital library, KumaNovels"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="author" content="Kizuko" />
+
+        <meta name="theme-color" content="#0f172a" />
+        <link rel="icon" type="image/png" href="/images/favicon.ico" />
+
+        <style>
+            :root {
+                --primary-color: #6d5dfc;
+                --bg-color: #0f172a;
+                --card-bg: #1e293b;
+                --text-main: #f1f5f9;
+                --text-muted: #94a3b8;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background-color: var(--bg-color);
+                color: var(--text-main);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+
+            /* Centered Responsive Container */
+            .legal-container {
+                width: 90%;
+                max-width: 800px;
+                height: 85vh;
+                background: var(--card-bg);
+                border-radius: 16px;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                overflow: hidden;
+                animation: fadeIn 0.4s ease-out;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Header & Navigation */
+            .legal-header {
+                padding: 20px 30px;
+                background: rgba(255, 255, 255, 0.03);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .tabs {
+                display: flex;
+                gap: 15px;
+            }
+
+            .tab-btn {
+                background: none;
+                border: none;
+                color: var(--text-muted);
+                font-weight: 600;
+                cursor: pointer;
+                padding: 8px 12px;
+                transition: 0.3s;
+                border-radius: 6px;
+            }
+
+            .tab-btn.active {
+                color: var(--primary-color);
+                background: rgba(109, 93, 252, 0.1);
+            }
+
+            /* Content Area */
+            .content-body {
+                padding: 30px;
+                overflow-y: auto;
+                scrollbar-width: thin;
+                scrollbar-color: var(--primary-color) transparent;
+            }
+
+            .content-section {
+                display: none;
+            }
+
+            .content-section.active {
+                display: block;
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: var(--text-main);
+            }
+            p,
+            li {
+                line-height: 1.6;
+                color: var(--text-muted);
+            }
+            a {
+                color: var(--primary-color);
+            }
+
+            .footer-action {
+                padding: 20px;
+                text-align: center;
+                background: rgba(255, 255, 255, 0.03);
+            }
+
+            .btn-close {
+                background: var(--primary-color);
+                color: white;
+                border: none;
+                padding: 10px 25px;
+                border-radius: 8px;
+                font-weight: bold;
+                cursor: pointer;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            /* Mobile Adjustments */
+            @media (max-width: 600px) {
+                .legal-container {
+                    width: 95%;
+                    height: 95vh;
+                }
+                .legal-header {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+                .content-body {
+                    padding: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="legal-container">
+            <div class="legal-header">
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="showTab('terms')">
+                        Terms of Service
+                    </button>
+                    <button class="tab-btn" onclick="showTab('privacy')">
+                        Privacy Policy
+                    </button>
+                </div>
+                <div style="font-weight: bold; color: var(--primary-color)">
+                    Kuma Novels
+                </div>
+            </div>
+
+            <div class="content-body" id="scroll-container">
+                <div id="terms" class="content-section active">
+                    <h1>Terms of Service</h1>
+                    <p><strong>Last Updated: January 2026</strong></p>
+                    <p>
+                        Welcome to Kuma Novels (“we,” “us,” or “our”). By
+                        accessing or using our website located at
+                        <a href="/">https://kumanovels.vercel.app/</a> (the
+                        “Site”), you agree to comply with and be bound by the
+                        following Terms of Service (“Terms”). If you do not
+                        agree to these Terms, please do not use the Site.
+                    </p>
+
+                    <h3>1. Acceptance of Terms</h3>
+                    <p>
+                        By using Kuma Novels, you affirm that you are at least
+                        13 years of age. If you are under 18, you represent that
+                        you have your parent or guardian’s permission to use the
+                        Site.
+                    </p>
+
+                    <h3>2. Description of Service</h3>
+                    <p>
+                        Kuma Novels provides a platform for users to discover
+                        and track web & light novels and related content. We do
+                        not host all content on our own servers; in many cases,
+                        we provide an interface to access content hosted
+                        elsewhere or translated by third parties.
+                    </p>
+
+                    <h3>3. Intellectual Property</h3>
+                    <ul>
+                        <li>
+                            <strong>Our Content:</strong> The interface, design,
+                            logo, and proprietary software of Kuma Novels are
+                            the property of the Site owners and protected by
+                            copyright laws.
+                        </li>
+                        <li>
+                            <strong>Third-Party Content:</strong> Novels,
+                            translations, and cover art displayed on the Site
+                            are the intellectual property of their respective
+                            authors, publishers, or translators. Kuma Novels
+                            claims no ownership over this content.
+                        </li>
+                        <li>
+                            <strong>DMCA/Copyright Policy:</strong> We respect
+                            intellectual property rights. If you believe your
+                            work has been used on the Site in a way that
+                            constitutes copyright infringement, please contact
+                            us at
+                            <a href="mailto:fnovels2003@gmail.com"
+                                >fnovels2003@gmail.com</a
+                            >
+                            with a formal takedown request.
+                        </li>
+                    </ul>
+
+                    <h3>4. User Conduct</h3>
+                    <p>You agree not to:</p>
+                    <ul>
+                        <li>
+                            Use any automated system (bots, scrapers) to extract
+                            data or content from the Site.
+                        </li>
+                        <li>
+                            Attempt to interfere with the proper working of the
+                            Site or bypass any security measures.
+                        </li>
+                        <li>
+                            Post or transmit any content that is illegal,
+                            harmful, or offensive in comment sections (if
+                            applicable).
+                        </li>
+                    </ul>
+
+                    <h3>5. Disclaimer of Warranties</h3>
+                    <p>
+                        The Site is provided on an "AS IS" and "AS AVAILABLE"
+                        basis. Kuma Novels makes no representations or
+                        warranties of any kind, express or implied, as to the
+                        operation of the Site or the accuracy of the content. We
+                        do not guarantee that the service will be uninterrupted
+                        or error-free.
+                    </p>
+
+                    <h3>6. Limitation of Liability</h3>
+                    <p>
+                        In no event shall Kuma Novels or its creators be liable
+                        for any damages (including, without limitation, loss of
+                        data or profit) arising out of the use or inability to
+                        use the materials on the Site.
+                    </p>
+
+                    <h3>7. Changes to Terms</h3>
+                    <p>
+                        We reserve the right to modify these Terms at any time.
+                        Your continued use of the Site following any changes
+                        constitutes your acceptance of the new Terms.
+                    </p>
+                </div>
+
+                <div id="privacy" class="content-section">
+                    <h1>Privacy Policy</h1>
+                    <p><strong>Last Updated: January 2026</strong></p>
+                    <p>
+                        At Kuma Novels, we value your privacy. This policy
+                        explains what information we collect and how it is used.
+                    </p>
+
+                    <h3>1. Information We Collect</h3>
+                    <p>
+                        We do not require users to create accounts to do things.
+                        We collect minimal data, including:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Log Data:</strong> Like most websites, we
+                            collect information that your browser sends whenever
+                            you visit our Site. This may include your IP
+                            address, browser type, pages visited, and the time
+                            spent on those pages.
+                        </li>
+                        <li>
+                            <strong>Cookies:</strong> We may use cookies to
+                            enhance your experience, such as remembering your
+                            "Reading List" or "Dark Mode" preferences. You can
+                            disable cookies in your browser settings, but some
+                            features may not function correctly.
+                        </li>
+                        <li>
+                            <strong>Local Storage:</strong> We use browser local
+                            storage to save your reading progress and history
+                            locally on your device.
+                        </li>
+                    </ul>
+
+                    <h3>2. Third-Party Services</h3>
+                    <p>
+                        We may use third-party analytics (like Google Analytics)
+                        or hosting services (like Vercel) that collect, monitor,
+                        and analyze user behavior to help us improve the Site’s
+                        performance. These third parties have their own privacy
+                        policies.
+                    </p>
+
+                    <h3>3. Data Retention</h3>
+                    <p>
+                        If you create an account (if applicable), we store the
+                        information you provide (e.g., username, email) as long
+                        as the account is active. If you use the site as a
+                        guest, your reading history is stored locally on your
+                        device and is not tracked by our servers.
+                    </p>
+
+                    <h3>4. Links to Other Sites</h3>
+                    <p>
+                        Our Site contains links to other websites (e.g.,
+                        original source links). We are not responsible for the
+                        privacy practices or content of those external sites.
+                    </p>
+
+                    <h3>5. Children’s Privacy</h3>
+                    <p>
+                        Kuma Novels does not knowingly collect personally
+                        identifiable information from children under 13. If we
+                        discover that a child under 13 has provided us with
+                        personal information, we will delete it immediately.
+                    </p>
+
+                    <h3>6. Security</h3>
+                    <p>
+                        We strive to use commercially acceptable means to
+                        protect your personal information, but remember that no
+                        method of transmission over the internet is 100% secure.
+                    </p>
+
+                    <h3>7. Contact Us</h3>
+                    <p>
+                        If you have any questions about this Privacy Policy or
+                        our Terms of Service, please contact us at: Email:
+                        <a href="mailto:fnovels2003@gmail.com"
+                            >fnovels2003@gmail.com</a
+                        >
+                        Website: <a href="/">https://kumanovels.vercel.app/</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-action">
+                <a href="/" class="btn-close">Back to Home</a>
+            </div>
+        </div>
+
+        <script>
+            function showTab(tabId) {
+                // Remove active classes
+                document
+                    .querySelectorAll(".content-section")
+                    .forEach((s) => s.classList.remove("active"));
+                document
+                    .querySelectorAll(".tab-btn")
+                    .forEach((b) => b.classList.remove("active"));
+
+                // Add active classes
+                document.getElementById(tabId).classList.add("active");
+                event.currentTarget.classList.add("active");
+
+                // Reset scroll position
+                document.getElementById("scroll-container").scrollTop = 0;
+            }
+        </script>
+    </body>
+</html>
