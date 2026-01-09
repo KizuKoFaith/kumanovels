@@ -298,6 +298,9 @@ header .header-wrapper {
     max-width: 100%;
     height: auto;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Main Container */
