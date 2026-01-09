@@ -1,524 +1,475 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Kuma Novels</title>
 
-        <!-- Styles Css-->
-        <link rel="stylesheet" href="/styles/style.css" />
-        <!-- Popup Ad -->
-        <script src="https://openairtowhardworking.com/94/a4/ed/94a4ed06afd1d59950426f0b20679f9b.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuma Novels</title>
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kumanovels.vercel.app/" />
+    <meta property="og:title" content="KumaNovels | Download High-Quality Web & Light Novels" />
+    <meta property="og:description" content="Collect your favorite ebook with clean, well-formatted EPUB and PDF web & light novels and read anywhere, on any device." />
+    <meta property="og:image" content="/images/icon_logo.jpg" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="KumaNovels - Your Digital Light Novel Library" />
+    <meta name="twitter:description" content="Download high-quality EPUBs and PDFs of your favorite web & light novels for offline reading." />
+    <meta name="twitter:image" content="/images/icon_logo.jpg" />
+    
+    <meta name="keywords" content="web novels, light novels, EPUB download, PDF download, offline reading, digital library, KumaNovels" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Kizuko" />
+    
+    <meta name="theme-color" content="#624637" />
+    <link rel="icon" type="image/png" href="/images/favicon.ico" />
+    
+    <!-- Styles Css-->
+    <link rel="stylesheet" href="/styles/style.css" />
+    <!-- Popup Ad -->
+    <script src="https://openairtowhardworking.com/94/a4/ed/94a4ed06afd1d59950426f0b20679f9b.js"></script>
+</head>
 
-    <body>
-        <main>
-            <header>
-                <div class="header-wrapper">
-                    <div class="header-brand">
-                        <a href="/" id="header-brank-link">KumaNovel</a>
-                    </div>
-                    <div class="mobile-menu menu-btn show">
-                        <i class="fa-solid fa-bars"></i>
-                    </div>
-                    <div class="header-nav-wrapper">
-                        <ul>
-                            <li><a href="/" id="item-list">Home</a></li>
-                            <li><a href="#" id="item-list">About</a></li>
-                            <li><a href="#" id="item-list">Contact</a></li>
-                            <li><a href="#" id="item-list">Login</a></li>
-                            <li>
-                                <form
-                                    id="novel-search-form"
-                                    method="GET"
-                                    class="search-form"
-                                >
-                                    <input
-                                        type="search"
-                                        name="search"
-                                        id="search-field"
-                                        placeholder="Search novel..."
-                                    />
-                                    <input type="submit" value="Search" />
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
+<body>
+    <main>
+        <header>
+            <div class="header-wrapper">
+                <div class="header-brand">
+                    <a href="/" id="header-brank-link">KumaNovel</a>
                 </div>
-            </header>
-
-            <div class="main-container">
-                <div class="post-wrapper">
-                    <div class="post-header-wrapper">
-                        <nav class="breadcrumb">
-                            <a href="/">Home</a>
-                            <span class="separator">/</span>
-                            <a href="#" id="breadcramp-type"></a>
-                            <span class="separator">/</span>
-                            <a href="#" id="breadcramp-year"></a>
-                            <span class="separator">/</span>
-                            <a href="#" id="breadcramp-title" class="active"
-                                >Loading...</a
-                            >
-                        </nav>
-                    </div>
-
-                    <article class="post-container">
-                        <div class="page-banner-box">
-                            <img
-                                id="novel-banner"
-                                src=""
-                                alt="Banner"
-                                class="banner-img"
-                            />
-                            <div class="banner-overlay"></div>
-
-                            <div class="page-cover-box">
-                                <div class="cover-image-wrapper">
-                                    <img id="novel-cover" src="" alt="Cover" />
-                                </div>
-                                <div class="novel-info">
-                                    <h1 id="novel-title"></h1>
-                                </div>
+                <div class="mobile-menu menu-btn show">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="header-nav-wrapper">
+                    <ul>
+                        <li><a href="/" id="item-list">Home</a></li>
+                        <li><a href="#" id="item-list">About</a></li>
+                        <li><a href="#" id="item-list">Contact</a></li>
+                        <li><a href="#" id="item-list">Login</a></li>
+                        <li>
+                            <form id="novel-search-form" method="GET" class="search-form">
+                                <input type="search" name="search" id="search-field" placeholder="Search novel..." />
+                                <input type="submit" value="Search" />
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <div class="main-container">
+            <div class="post-wrapper">
+                <div class="post-header-wrapper">
+                    <nav class="breadcrumb">
+                        <a href="/">Home</a>
+                        <span class="separator">/</span>
+                        <a href="#" id="breadcramp-type"></a>
+                        <span class="separator">/</span>
+                        <a href="#" id="breadcramp-year"></a>
+                        <span class="separator">/</span>
+                        <a href="#" id="breadcramp-title" class="active">Loading...</a>
+                    </nav>
+                </div>
+                
+                <article class="post-container">
+                    <div class="page-banner-box">
+                        <img id="novel-banner" src="" alt="Banner" class="banner-img" />
+                        <div class="banner-overlay"></div>
+                        
+                        <div class="page-cover-box">
+                            <div class="cover-image-wrapper">
+                                <img id="novel-cover" src="" alt="Cover" />
                             </div>
-
-                            <div class="add-to-fav">
-                                <i class="fa-solid fa-heart"></i>
+                            <div class="novel-info">
+                                <h1 id="novel-title"></h1>
                             </div>
                         </div>
-                        <!-- Native Ad -->
-                        <script
-                            async="async"
-                            data-cfasync="false"
-                            src="https://openairtowhardworking.com/8c06b9547abbe5f11d6b56a46b417557/invoke.js"
-                        ></script>
-                        <div
-                            id="container-8c06b9547abbe5f11d6b56a46b417557"
-                        ></div>
-                        <div class="novel-content-body">
-                            <div class="content-grid">
-                                <article class="main-text">
-                                    <h3>
-                                        <i class="fa-solid fa-book-open"></i>
-                                        Synopsis
-                                    </h3>
-                                    <div id="novel-description"></div>
-
-                                    <div class="novel-actions">
-                                        <div class="action-card">
-                                            <a
-                                                href="#"
-                                                id="download-link"
-                                                class="download-btn"
-                                            >
-                                                <i
-                                                    class="fa-solid fa-cloud-arrow-down"
-                                                ></i>
-                                                <span id="btn-text"
-                                                    >Get Ebook</span
-                                                >
-                                            </a>
-                                        </div>
-
-                                        <div class="meta-card">
-                                            <div class="meta-list">
-                                                <div class="meta-item">
-                                                    <span class="label"
-                                                        >Author</span
-                                                    >
-                                                    <span
-                                                        class="value"
-                                                        id="novel-author"
-                                                        >-</span
-                                                    >
-                                                </div>
-                                                <div class="meta-item">
-                                                    <span class="label"
-                                                        >Status</span
-                                                    >
-                                                    <span
-                                                        class="value status-badge"
-                                                        id="novel-status"
-                                                        >-</span
-                                                    >
-                                                </div>
-                                                <div class="meta-item">
-                                                    <span class="label"
-                                                        >Source</span
-                                                    >
-                                                    <a
-                                                        href="#"
-                                                        class="value"
-                                                        id="novel-source"
-                                                        target="_blank"
-                                                        >-</a
-                                                    >
-                                                </div>
+                        
+                        <div class="add-to-fav">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <!-- Native Ad -->
+                    <script async="async" data-cfasync="false" src="https://openairtowhardworking.com/8c06b9547abbe5f11d6b56a46b417557/invoke.js"></script>
+                    <div id="container-8c06b9547abbe5f11d6b56a46b417557"></div>
+                    <div class="novel-content-body">
+                        <div class="content-grid">
+                            <article class="main-text">
+                                <h3>
+                                    <i class="fa-solid fa-book-open"></i>
+                                    Synopsis
+                                </h3>
+                                <div id="novel-description"></div>
+                                
+                                <div class="novel-actions">
+                                    <div class="action-card">
+                                        <a href="#" id="download-link" class="download-btn">
+                                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                                            <span id="btn-text">Get Ebook</span>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="meta-card">
+                                        <div class="meta-list">
+                                            <div class="meta-item">
+                                                <span class="label">Author</span>
+                                                <span class="value" id="novel-author">-</span>
                                             </div>
-
-                                            <div class="genre-section">
-                                                <span class="label"
-                                                    >GENRES</span
-                                                >
-                                                <div
-                                                    id="genre-container"
-                                                    class="genre-tags"
-                                                ></div>
+                                            <div class="meta-item">
+                                                <span class="label">Status</span>
+                                                <span class="value status-badge" id="novel-status">-</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <span class="label">Source</span>
+                                                <a href="#" class="value" id="novel-source" target="_blank">-</a>
                                             </div>
                                         </div>
-                                        <div class="ad-container">
-                                            <script>
-                                                atOptions = {
-                                                    key: "d728a97b32e488c47bb3d5d629f31e0b",
-                                                    format: "iframe",
-                                                    height: 60,
-                                                    width: 468,
-                                                    params: {},
-                                                };
-                                            </script>
-                                            <script src="https://openairtowhardworking.com/d728a97b32e488c47bb3d5d629f31e0b/invoke.js"></script>
-                                        </div>
-                                        <div class="page-series-wrapper">
-                                            <h3 class="series-list-title">
-                                                Volume Series
-                                            </h3>
-                                            <div
-                                                class="page-series-list"
-                                                id="series-list-container"
-                                            ></div>
-                                        </div>
-                                        <div class="ad-container">
-                                            <script>
-                                                atOptions = {
-                                                    key: "813a1c7ab649cc28b41a45a6bbd76697",
-                                                    format: "iframe",
-                                                    height: 250,
-                                                    width: 300,
-                                                    params: {},
-                                                };
-                                            </script>
-                                            <script src="https://openairtowhardworking.com/813a1c7ab649cc28b41a45a6bbd76697/invoke.js"></script>
+                                        
+                                        <div class="genre-section">
+                                            <span class="label">GENRES</span>
+                                            <div id="genre-container" class="genre-tags"></div>
                                         </div>
                                     </div>
-                                </article>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <aside class="popular-post-wrapper">
-                    <div class="popular-header-wrapper">
-                        <h1>Most Popular</h1>
-                    </div>
-                    <div id="popular-skeleton">
-                        <div class="popular-item-skeleton">
-                            <div class="skeleton-rank"></div>
-                            <div class="skeleton-thumb"></div>
-                            <div class="skeleton-info">
-                                <div class="skeleton-line title"></div>
-                                <div class="skeleton-line meta"></div>
-                            </div>
-                        </div>
-                        <div class="popular-item-skeleton">
-                            <div class="skeleton-rank"></div>
-                            <div class="skeleton-thumb"></div>
-                            <div class="skeleton-info">
-                                <div class="skeleton-line title"></div>
-                                <div class="skeleton-line meta"></div>
-                            </div>
-                        </div>
-                        <div class="popular-item-skeleton">
-                            <div class="skeleton-rank"></div>
-                            <div class="skeleton-thumb"></div>
-                            <div class="skeleton-info">
-                                <div class="skeleton-line title"></div>
-                                <div class="skeleton-line meta"></div>
-                            </div>
-                        </div>
-                        <div class="popular-item-skeleton">
-                            <div class="skeleton-rank"></div>
-                            <div class="skeleton-thumb"></div>
-                            <div class="skeleton-info">
-                                <div class="skeleton-line title"></div>
-                                <div class="skeleton-line meta"></div>
-                            </div>
-                        </div>
-                        <div class="popular-item-skeleton">
-                            <div class="skeleton-rank"></div>
-                            <div class="skeleton-thumb"></div>
-                            <div class="skeleton-info">
-                                <div class="skeleton-line title"></div>
-                                <div class="skeleton-line meta"></div>
-                            </div>
+                                    <div class="ad-container">
+                                        <script>
+                                            atOptions = {
+                                                key: "d728a97b32e488c47bb3d5d629f31e0b",
+                                                format: "iframe",
+                                                height: 60,
+                                                width: 468,
+                                                params: {},
+                                            };
+                                        </script>
+                                        <script src="https://openairtowhardworking.com/d728a97b32e488c47bb3d5d629f31e0b/invoke.js"></script>
+                                    </div>
+                                    <div class="page-series-wrapper">
+                                        <h3 class="series-list-title">
+                                            Volume Series
+                                        </h3>
+                                        <div class="page-series-list" id="series-list-container"></div>
+                                    </div>
+                                    <div class="ad-container">
+                                        <script>
+                                            atOptions = {
+                                                key: "813a1c7ab649cc28b41a45a6bbd76697",
+                                                format: "iframe",
+                                                height: 250,
+                                                width: 300,
+                                                params: {},
+                                            };
+                                        </script>
+                                        <script src="https://openairtowhardworking.com/813a1c7ab649cc28b41a45a6bbd76697/invoke.js"></script>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
-                    <div class="popular-wrapper"></div>
-                </aside>
+                </article>
             </div>
-
-            <footer>
-                <div class="footer-container">
-                    <div class="footer-section about">
-                        <h2 class="footer-logo">KumaNovel</h2>
-                        <p class="footer-description">
-                            KumaNovel is your ultimate digital library for
-                            high-quality web novels and light novels. We
-                            specialize in providing clean, well-formatted
-                            <strong>EPUB</strong> and
-                            <strong>PDF</strong> files, allowing you to build
-                            your personal offline collection and read on any
-                            e-reader or mobile device.
-                        </p>
-                        <div class="footer-info-meta">
-                            <p>
-                                <i class="fa-solid fa-file-arrow-down"></i>
-                                <strong>Unlimited</strong> Free Downloads
-                            </p>
-                            <p>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                                <strong>Optimized</strong> for Kindle & Mobile
-                            </p>
-                            <p>
-                                <i class="fa-solid fa-box-archive"></i>
-                                <strong>Formats:</strong> EPUB, PDF, & MOBI
-                            </p>
+            <aside class="popular-post-wrapper">
+                <div class="popular-header-wrapper">
+                    <h1>Most Popular</h1>
+                </div>
+                <div id="popular-skeleton">
+                    <div class="popular-item-skeleton">
+                        <div class="skeleton-rank"></div>
+                        <div class="skeleton-thumb"></div>
+                        <div class="skeleton-info">
+                            <div class="skeleton-line title"></div>
+                            <div class="skeleton-line meta"></div>
                         </div>
                     </div>
-
-                    <div class="footer-section links">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Latest Updates</a></li>
-                            <li><a href="#">Popular Novels</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
+                    <div class="popular-item-skeleton">
+                        <div class="skeleton-rank"></div>
+                        <div class="skeleton-thumb"></div>
+                        <div class="skeleton-info">
+                            <div class="skeleton-line title"></div>
+                            <div class="skeleton-line meta"></div>
+                        </div>
                     </div>
-
-                    <div class="footer-section disclaimer">
-                        <h3>Disclaimer</h3>
+                    <div class="popular-item-skeleton">
+                        <div class="skeleton-rank"></div>
+                        <div class="skeleton-thumb"></div>
+                        <div class="skeleton-info">
+                            <div class="skeleton-line title"></div>
+                            <div class="skeleton-line meta"></div>
+                        </div>
+                    </div>
+                    <div class="popular-item-skeleton">
+                        <div class="skeleton-rank"></div>
+                        <div class="skeleton-thumb"></div>
+                        <div class="skeleton-info">
+                            <div class="skeleton-line title"></div>
+                            <div class="skeleton-line meta"></div>
+                        </div>
+                    </div>
+                    <div class="popular-item-skeleton">
+                        <div class="skeleton-rank"></div>
+                        <div class="skeleton-thumb"></div>
+                        <div class="skeleton-info">
+                            <div class="skeleton-line title"></div>
+                            <div class="skeleton-line meta"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-wrapper"></div>
+            </aside>
+        </div>
+        
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section about">
+                    <h2 class="footer-logo">KumaNovel</h2>
+                    <p class="footer-description">
+                        KumaNovel is your ultimate digital library for
+                        high-quality web novels and light novels. We
+                        specialize in providing clean, well-formatted
+                        <strong>EPUB</strong> and
+                        <strong>PDF</strong> files, allowing you to build
+                        your personal offline collection and read on any
+                        e-reader or mobile device.
+                    </p>
+                    <div class="footer-info-meta">
                         <p>
-                            KumaNovel does not store any files on its server.
-                            All contents are provided by non-affiliated third
-                            parties. If you believe your copyrighted work is
-                            being used without permission, please contact us for
-                            immediate removal.
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <strong>Unlimited</strong> Free Downloads
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <strong>Optimized</strong> for Kindle & Mobile
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-box-archive"></i>
+                            <strong>Formats:</strong> EPUB, PDF, & MOBI
                         </p>
                     </div>
-
-                    <div class="footer-section social">
-                        <h3>Follow Us</h3>
-                        <div class="social-links">
-                            <a href="#" class="social-icon"
-                                ><i class="fa-brands fa-facebook"></i
-                            ></a>
-                            <a href="#" class="social-icon"
-                                ><i class="fa-brands fa-discord"></i
-                            ></a>
-                            <a href="#" class="social-icon"
-                                ><i class="fa-brands fa-telegram"></i
-                            ></a>
-                            <a href="#" class="social-icon"
-                                ><i class="fa-brands fa-x-twitter"></i
-                            ></a>
-                        </div>
+                </div>
+                
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Latest Updates</a></li>
+                        <li><a href="#">Popular Novels</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section disclaimer">
+                    <h3>Disclaimer</h3>
+                    <p>
+                        KumaNovel does not store any files on its server.
+                        All contents are provided by non-affiliated third
+                        parties. If you believe your copyrighted work is
+                        being used without permission, please contact us for
+                        immediate removal.
+                    </p>
+                </div>
+                
+                <div class="footer-section social">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2026 Kuma Novels. All rights reserved.</p>
-                </div>
-            </footer>
-        </main>
-
-        <script
-            src="https://kit.fontawesome.com/48699b744e.js"
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="/script/script.js"></script>
-        <script>
-            $(document).ready(function () {
-                let currentNovelData = null;
-
-                function fetchSingleVolume(slug, year) {
-                    // Show a loading state if desired
-                    $("#novel-title").text("Loading...");
-
-                    $.ajax({
-                        url: `/api/novels/volume/${slug}`,
-                        type: "GET",
-                        dataType: "json", // Automatically parses JSON
-                        success: function (result) {
-                            // 1. Before the AJAX starts, show 5 shimmer placeholders
-                            const shimmerPlaceholders = Array(5)
-                                .fill(
-                                    `
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kuma Novels. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+    
+    <script src="https://kit.fontawesome.com/48699b744e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/script/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            let currentNovelData = null;
+            
+            function fetchSingleVolume(slug, year) {
+                // Show a loading state if desired
+                $("#novel-title").text("Loading...");
+                
+                $.ajax({
+                    url: `/api/novels/volume/${slug}`,
+                    type: "GET",
+                    dataType: "json", // Automatically parses JSON
+                    success: function(result) {
+                        // 1. Before the AJAX starts, show 5 shimmer placeholders
+                        const shimmerPlaceholders = Array(5)
+                            .fill(
+                                `
                               <div class="series-card is-loading">
                                   <div class="series-image-box shimmer"></div>
                               </div>
                           `,
-                                )
-                                .join("");
-                            $(".page-series-list").html(shimmerPlaceholders);
-
-                            if (result.success) {
-                                const volumeData = result.data;
-                                currentNovelData = volumeData;
-                                const $seriesList = $(".page-series-list");
-
-                                $seriesList.empty();
-
-                                // Update Title & Breadcrumb
-                                $("#breadcramp-type").text(
-                                    volumeData.additional_info.type,
+                            )
+                            .join("");
+                        $(".page-series-list").html(shimmerPlaceholders);
+                        
+                        if (result.success) {
+                            const volumeData = result.data;
+                            currentNovelData = volumeData;
+                            const $seriesList = $(".page-series-list");
+                            
+                            $seriesList.empty();
+                            
+                            // Update Title & Breadcrumb
+                            $("#breadcramp-type").text(
+                                volumeData.additional_info.type,
+                            );
+                            $("#breadcramp-year").text(year);
+                            $("#breadcramp-title").text(volumeData.title);
+                            $("#novel-title").text(
+                                `${volumeData.title} Volume ${volumeData.volumes.volume}`,
+                            );
+                            
+                            $("#breadcramp-type").click(() => {
+                                window.location.href = `/search/type/${volumeData.additional_info.type}/1`;
+                            });
+                            
+                            $("#breadcramp-year").click(() => {
+                                window.location.href = `/search/year/${year}/1`;
+                            });
+                            
+                            // Update Images
+                            $("#novel-banner").attr(
+                                "src",
+                                `/proxy-image?url=${encodeURIComponent(volumeData.banner)}`,
+                            );
+                            $("#novel-cover").attr(
+                                "src",
+                                `/proxy-image?url=${encodeURIComponent(volumeData.volumes.cover)}`,
+                            );
+                            $("#novel-cover").attr(
+                                "onerror",
+                                volumeData.volumes.cover,
+                            );
+                            
+                            // Update description (if available in API)
+                            if (volumeData.volumes.synopsis) {
+                                $("#novel-description").html(
+                                    volumeData.volumes.synopsis,
                                 );
-                                $("#breadcramp-year").text(year);
-                                $("#breadcramp-title").text(volumeData.title);
-                                $("#novel-title").text(
-                                    `${volumeData.title} Volume ${volumeData.volumes.volume}`,
-                                );
-
-                                $("#breadcramp-type").click(() => {
-                                    window.location.href = `/search/type/${volumeData.additional_info.type}/1`;
-                                });
-
-                                $("#breadcramp-year").click(() => {
-                                    window.location.href = `/search/year/${year}/1`;
-                                });
-
-                                // Update Images
-                                $("#novel-banner").attr(
-                                    "src",
-                                    `/proxy-image?url=${encodeURIComponent(volumeData.banner)}`,
-                                );
-                                $("#novel-cover").attr(
-                                    "src",
-                                    `/proxy-image?url=${encodeURIComponent(volumeData.volumes.cover)}`,
-                                );
-                                $("#novel-cover").attr(
-                                    "onerror",
-                                    volumeData.volumes.cover,
-                                );
-
-                                // Update description (if available in API)
-                                if (volumeData.volumes.synopsis) {
-                                    $("#novel-description").html(
-                                        volumeData.volumes.synopsis,
-                                    );
+                            }
+                            
+                            // Fill Sidebar Fields
+                            $("#novel-author").text(
+                                volumeData.additional_info.author,
+                            );
+                            $("#novel-status").text(
+                                volumeData.additional_info.status,
+                            );
+                            $("#novel-type").text(
+                                volumeData.additional_info.type,
+                            );
+                            $("#novel-source")
+                                .text(volumeData.source.name)
+                                .attr("href", volumeData.source.url);
+                            
+                            let originalUrl = volumeData.volumes.url;
+                            
+                            // 2. Extract the ID and create the Direct Download Link
+                            // This regex looks for the string between /d/ and /view
+                            let driveId = originalUrl.match(/\/d\/(.+?)\//);
+                            let directDownloadUrl = driveId ?
+                                `https://drive.google.com/uc?export=download&id=${driveId[1]}` :
+                                originalUrl;
+                            
+                            const adUrl =
+                                "https://openairtowhardworking.com/wijc7tkm?key=876f1150504b3eaf4c912323072e0ac9";
+                            
+                            $("#download-link").on("click", function(e) {
+                                const $link = $(this);
+                                const $text = $("#btn-text");
+                                
+                                if ($link.hasClass("is-ready")) {
+                                    return; // Allow the direct download to happen
                                 }
-
-                                // Fill Sidebar Fields
-                                $("#novel-author").text(
-                                    volumeData.additional_info.author,
-                                );
-                                $("#novel-status").text(
-                                    volumeData.additional_info.status,
-                                );
-                                $("#novel-type").text(
-                                    volumeData.additional_info.type,
-                                );
-                                $("#novel-source")
-                                    .text(volumeData.source.name)
-                                    .attr("href", volumeData.source.url);
-
-                                let originalUrl = volumeData.volumes.url;
-
-                                // 2. Extract the ID and create the Direct Download Link
-                                // This regex looks for the string between /d/ and /view
-                                let driveId = originalUrl.match(/\/d\/(.+?)\//);
-                                let directDownloadUrl = driveId
-                                    ? `https://drive.google.com/uc?export=download&id=${driveId[1]}`
-                                    : originalUrl;
-
-                                const adUrl =
-                                    "https://openairtowhardworking.com/wijc7tkm?key=876f1150504b3eaf4c912323072e0ac9";
-
-                                $("#download-link").on("click", function (e) {
-                                    const $link = $(this);
-                                    const $text = $("#btn-text");
-
-                                    if ($link.hasClass("is-ready")) {
-                                        return; // Allow the direct download to happen
-                                    }
-
-                                    e.preventDefault();
-
-                                    // Open Adsterra Smart Link
-                                    window.open(adUrl, "_blank");
-
-                                    // Start Countdown
-                                    let counter = 5;
-                                    $link.css({
-                                        "pointer-events": "none",
-                                        opacity: "0.7",
-                                    });
-                                    $text.text(
-                                        "Preparing Link... " + counter + "s",
-                                    );
-
-                                    const countdownInterval = setInterval(
-                                        function () {
-                                            counter--;
-                                            if (counter > 0) {
-                                                $text.text(
-                                                    "Preparing Link... " +
-                                                        counter +
-                                                        "s",
-                                                );
-                                            } else {
-                                                clearInterval(
-                                                    countdownInterval,
-                                                );
-
-                                                // Finalize Button
-                                                $text.text(
-                                                    "Download Ebook Now",
-                                                );
-                                                $link.attr(
-                                                    "href",
-                                                    directDownloadUrl,
-                                                ); // Set the Direct Download URL
-                                                $link.addClass("is-ready");
-                                                $link.css({
-                                                    "pointer-events": "auto",
-                                                    opacity: "1",
-                                                });
-                                            }
-                                        },
-                                        1000,
-                                    );
+                                
+                                e.preventDefault();
+                                
+                                // Open Adsterra Smart Link
+                                window.open(adUrl, "_blank");
+                                
+                                // Start Countdown
+                                let counter = 5;
+                                $link.css({
+                                    "pointer-events": "none",
+                                    opacity: "0.7",
                                 });
-
-                                // Render Genres with Clickable Links
-                                if (
-                                    volumeData.genres &&
-                                    Array.isArray(volumeData.genres)
-                                ) {
-                                    const genreHtml = volumeData.genres
-                                        .map((g) => {
-                                            // Encode the genre for the URL
-                                            const encodedGenre =
-                                                encodeURIComponent(g);
-                                            return `<span class="genre-tag"
+                                $text.text(
+                                    "Preparing Link... " + counter + "s",
+                                );
+                                
+                                const countdownInterval = setInterval(
+                                    function() {
+                                        counter--;
+                                        if (counter > 0) {
+                                            $text.text(
+                                                "Preparing Link... " +
+                                                counter +
+                                                "s",
+                                            );
+                                        } else {
+                                            clearInterval(
+                                                countdownInterval,
+                                            );
+                                            
+                                            // Finalize Button
+                                            $text.text(
+                                                "Download Ebook Now",
+                                            );
+                                            $link.attr(
+                                                "href",
+                                                directDownloadUrl,
+                                            ); // Set the Direct Download URL
+                                            $link.addClass("is-ready");
+                                            $link.css({
+                                                "pointer-events": "auto",
+                                                opacity: "1",
+                                            });
+                                        }
+                                    },
+                                    1000,
+                                );
+                            });
+                            
+                            // Render Genres with Clickable Links
+                            if (
+                                volumeData.genres &&
+                                Array.isArray(volumeData.genres)
+                            ) {
+                                const genreHtml = volumeData.genres
+                                    .map((g) => {
+                                        // Encode the genre for the URL
+                                        const encodedGenre =
+                                            encodeURIComponent(g);
+                                        return `<span class="genre-tag"
                                                           style="cursor: pointer;"
                                                           onclick="window.location.href='/search/genre/${encodedGenre}/1'">
                                                         ${g}
                                                     </span>`;
-                                        })
-                                        .join("");
-
-                                    $("#genre-container")
-                                        .empty()
-                                        .append(genreHtml);
-                                }
-
-                                if (
-                                    volumeData.series_volumes &&
-                                    volumeData.series_volumes.length > 0
-                                ) {
-                                    $.each(
-                                        volumeData.series_volumes,
-                                        function (index, vol) {
-                                            const $card = $(`
+                                    })
+                                    .join("");
+                                
+                                $("#genre-container")
+                                    .empty()
+                                    .append(genreHtml);
+                            }
+                            
+                            if (
+                                volumeData.series_volumes &&
+                                volumeData.series_volumes.length > 0
+                            ) {
+                                $.each(
+                                    volumeData.series_volumes,
+                                    function(index, vol) {
+                                        const $card = $(`
                                                 <div class="series-card" title="${volumeData.title} Volume ${vol.volume}">
                                                     <div class="series-image-box">
                                                         <img src="/proxy-image?url=${encodeURIComponent(vol.cover)}"
@@ -527,122 +478,121 @@
                                                     </div>
                                                 </div>
                                             `);
-
-                                            // Add click event to navigate to that volume
-                                            $card.on("click", function () {
-                                                // Assuming path is /year/slug
-                                                window.location.href = `/page/${year}/${vol.slug}`;
-                                            });
-
-                                            $seriesList.append($card);
-                                        },
-                                    );
-                                } else {
-                                    $(".page-series-wrapper").hide(); // Hide if no other volumes
-                                }
+                                        
+                                        // Add click event to navigate to that volume
+                                        $card.on("click", function() {
+                                            // Assuming path is /year/slug
+                                            window.location.href = `/page/${year}/${vol.slug}`;
+                                        });
+                                        
+                                        $seriesList.append($card);
+                                    },
+                                );
+                            } else {
+                                $(".page-series-wrapper").hide(); // Hide if no other volumes
                             }
-                        },
-                        error: function (err) {
-                            console.error("Error fetching volume:", err);
-                            $(".post-container").html(
-                                "<p class='error'>Failed to load novel details.</p>",
-                            );
-                        },
-                    });
-                }
-
-                const pathSegments = window.location.pathname.split("/");
-                const slug = pathSegments[pathSegments.length - 1];
-                const year = pathSegments[pathSegments.length - 2];
-
-                if (
-                    slug &&
-                    slug !== "" &&
-                    slug !== "page" &&
-                    slug !== "page.html"
-                ) {
-                    fetchSingleVolume(slug, year);
-                    // Check if current slug is already bookmarked
-                    const bookmarks =
-                        JSON.parse(localStorage.getItem("kuma_bookmarks")) ||
-                        [];
-                    const isBookmarked = bookmarks.some(
-                        (item) => item.slug === slug,
-                    );
-
-                    if (isBookmarked) {
-                        $(".add-to-fav").css("color", "red");
-                    }
-                }
-
-                // 1. Create a variable outside the click handler to track state
-                let isProcessingFav = false;
-
-                $(".add-to-fav").on("click", function () {
-                    if (isProcessingFav) return;
-
-                    const $btn = $(this);
-                    let bookmarks =
-                        JSON.parse(localStorage.getItem("kuma_bookmarks")) ||
-                        [];
-
-                    const existingIndex = bookmarks.findIndex(
-                        (item) => item.slug === slug,
-                    );
-                    const isAlreadyBookmarked = existingIndex !== -1;
-
-                    if (isAlreadyBookmarked) {
-                        // --- REMOVE LOGIC (Local/Instant) ---
-                        bookmarks.splice(existingIndex, 1);
-                        localStorage.setItem(
-                            "kuma_bookmarks",
-                            JSON.stringify(bookmarks),
+                        }
+                    },
+                    error: function(err) {
+                        console.error("Error fetching volume:", err);
+                        $(".post-container").html(
+                            "<p class='error'>Failed to load novel details.</p>",
                         );
-                        $btn.css("color", "#fff");
-                    } else {
-                        // --- ADD LOGIC (Remote/API) ---
-                        isProcessingFav = true;
-
-                        // 1. DISABLE BUTTON HERE (Immediate)
-                        $btn.prop("disabled", true);
-                        $btn.css("opacity", "0.5");
-
-                        fetch(`/api/novels/favorite/${slug}`, {
+                    },
+                });
+            }
+            
+            const pathSegments = window.location.pathname.split("/");
+            const slug = pathSegments[pathSegments.length - 1];
+            const year = pathSegments[pathSegments.length - 2];
+            
+            if (
+                slug &&
+                slug !== "" &&
+                slug !== "page" &&
+                slug !== "page.html"
+            ) {
+                fetchSingleVolume(slug, year);
+                // Check if current slug is already bookmarked
+                const bookmarks =
+                    JSON.parse(localStorage.getItem("kuma_bookmarks")) || [];
+                const isBookmarked = bookmarks.some(
+                    (item) => item.slug === slug,
+                );
+                
+                if (isBookmarked) {
+                    $(".add-to-fav").css("color", "red");
+                }
+            }
+            
+            // 1. Create a variable outside the click handler to track state
+            let isProcessingFav = false;
+            
+            $(".add-to-fav").on("click", function() {
+                if (isProcessingFav) return;
+                
+                const $btn = $(this);
+                let bookmarks =
+                    JSON.parse(localStorage.getItem("kuma_bookmarks")) || [];
+                
+                const existingIndex = bookmarks.findIndex(
+                    (item) => item.slug === slug,
+                );
+                const isAlreadyBookmarked = existingIndex !== -1;
+                
+                if (isAlreadyBookmarked) {
+                    // --- REMOVE LOGIC (Local/Instant) ---
+                    bookmarks.splice(existingIndex, 1);
+                    localStorage.setItem(
+                        "kuma_bookmarks",
+                        JSON.stringify(bookmarks),
+                    );
+                    $btn.css("color", "#fff");
+                } else {
+                    // --- ADD LOGIC (Remote/API) ---
+                    isProcessingFav = true;
+                    
+                    // 1. DISABLE BUTTON HERE (Immediate)
+                    $btn.prop("disabled", true);
+                    $btn.css("opacity", "0.5");
+                    
+                    fetch(`/api/novels/favorite/${slug}`, {
                             method: "POST",
                         })
-                            .then((res) => res.json())
-                            .then((data) => {
-                                if (data.success && currentNovelData) {
-                                    const bookmarkInfo = {
-                                        id: currentNovelData.id,
-                                        slug: currentNovelData.slug,
-                                        cover: currentNovelData.volumes.cover,
-                                        type: currentNovelData.additional_info
-                                            .type,
-                                        volume: currentNovelData.volumes.volume,
-                                        title: currentNovelData.title,
-                                    };
-
-                                    bookmarks.push(bookmarkInfo);
-                                    localStorage.setItem(
-                                        "kuma_bookmarks",
-                                        JSON.stringify(bookmarks),
-                                    );
-                                    $btn.css("color", "red");
-                                }
-                            })
-                            .catch((err) => console.error("Error:", err))
-                            .finally(() => {
-                                isProcessingFav = false;
-
-                                // 2. RE-ENABLE BUTTON HERE (When finished)
-                                $btn.prop("disabled", false);
-                                $btn.css("opacity", "1");
-                            });
-                    }
-                });
+                        .then((res) => res.json())
+                        .then((data) => {
+                            if (data.success && currentNovelData) {
+                                const bookmarkInfo = {
+                                    id: currentNovelData.id,
+                                    slug: currentNovelData.slug,
+                                    cover: currentNovelData.volumes.cover,
+                                    type: currentNovelData.additional_info
+                                        .type,
+                                    volume: currentNovelData.volumes.volume,
+                                    title: currentNovelData.title,
+                                };
+                                
+                                bookmarks.push(bookmarkInfo);
+                                localStorage.setItem(
+                                    "kuma_bookmarks",
+                                    JSON.stringify(bookmarks),
+                                );
+                                $btn.css("color", "red");
+                            }
+                        })
+                        .catch((err) => console.error("Error:", err))
+                        .finally(() => {
+                            isProcessingFav = false;
+                            
+                            // 2. RE-ENABLE BUTTON HERE (When finished)
+                            $btn.prop("disabled", false);
+                            $btn.css("opacity", "1");
+                        });
+                }
             });
-        </script>
-        <script src="https://openairtowhardworking.com/5d/8c/22/5d8c22ddf20ac44a6f30ca7dc7682f56.js"></script>
-    </body>
+        });
+    </script>
+    <script src="https://openairtowhardworking.com/5d/8c/22/5d8c22ddf20ac44a6f30ca7dc7682f56.js"></script>
+</body>
+
 </html>

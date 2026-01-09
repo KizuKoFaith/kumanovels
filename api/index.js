@@ -22,6 +22,7 @@ app.get("/", (req, res) => {
 
 app.use("/styles", express.static(path.join(root, "styles")));
 app.use("/script", express.static(path.join(root, "script")));
+app.use("/images", express.static(path.join(root, "images")));
 
 app.get("/page/:year/:slug", (req, res) => {
   // Assuming page.html is in /page/ folder at the root
