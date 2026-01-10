@@ -1,6 +1,52 @@
 {
   "data": [
     {
+      "id": "20",
+      "title": "I May Be a Guild Receptionist, But I’ll Solo Any Boss to Clock Out on Time",
+      "coverImage": {
+        "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2023/09/I-May-Be-a-Guild-Receptionist-but-Ill-Solo-Any-Boss-to-Clock-Out-on-Time-v01.jpg?w=500&ssl=1",
+        "banner": "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2023/07/imaybeaguildreceptionistbutillsoloanybosstoclockoutontime_animeannouncementpvscreenshot.png"
+      },
+      "additional_info": {
+        "author": "Mato Kousaka",
+        "status": "Releasing",
+        "type": "Light Novel",
+        "updatedAt": "1768085479",
+        "description": "<strong>TAKE A HAMMER TO OVERWORK!</strong><br />Alina Clover signed up to be a receptionist for the Adventurers Guildthinking it would be her ticket to the good life—stable pay, regular hours, and safe workplace conditions. Unfortunately, her dream gig turns into a nightmare of endless paper work and overtime whenever the adventurers she helps coordinate get stuck clearing a dungeon. But people aren’t made to grind forever, so Alina sneaks off at night to give the monsters holding things up a beatdown, courtesy of her massive war hammer. Keeping this all under wraps to avoid violating her office’s ban on second jobs is difficult, especially when the tales of her exploits start to spread, but Alina somehow manages to keep her identity safe…until the leader of the strongest party in the guild catches her defeating a boss one fateful night! Does Alina have what it takes to stop her life from going topsy-turvy?!"
+      },
+      "genres": ["Action", "Adventure", "Comedy", "Fantasy"],
+      "source": {
+        "url": "https://yenpress.com/series/i-may-be-a-guild-receptionist-but-i-ll-solo-any-boss-to-clock-out-on-time-manga",
+        "name": "Yen Press"
+      },
+      "volumes": [
+        {
+          "volume": "4",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2024/11/I-May-Be-a-Guild-Receptionist-but-Ill-Solo-Any-Boss-to-Clock-Out-on-Time-v04.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1qeSKxkhSX3P6IVJQ4-PmRp3MY3_1adIf/view?usp=drivesdk",
+          "synopsis": "When Alina is assigned to oversee a battle tournament held once every four years, she knows she’s in for one hell of a workload. Good thing Iffole Counter is holding the grand prize, a rare and valuable statue which is, crucially, unbreakable—it’s the perfect thing to take out her frustrations on. That is, until she smacks it too hard, and its head pops right off! Will she have to pay for it? And worse, what if someone finds out a mere receptionist broke the unbreakable? Alina’s only choice is to glue the thing back together, win the tournament, and take home the prize herself!"
+        },
+        {
+          "volume": "3",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2024/06/I-May-Be-a-Guild-Receptionist-but-Ill-Solo-Any-Boss-to-Clock-Out-on-Time-v03.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1sP4RDa3SfUOeauL17ARF2ZLZl9NtZiiq/view?usp=drivesdk",
+          "synopsis": "Despite her best efforts, Alina Clover once again finds herself sneaking off in the night to smash dungeon monsters (and walls) to cut down on her over time. But a glimmer of hope emerges when she hears about a new policy being implemented at the office: Employees who submit an effective business betterment plan will be given a day off on their birthday. Alina is determined to snag that birthday break yet is totally stumped when it comes to ideas. Maybe she can get some inspiration at the annual receptionist training seminar…But with this much overtime, will she even get to go?"
+        },
+        {
+          "volume": "2",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2024/01/I-May-Be-a-Guild-Receptionist-but-Ill-Solo-Any-Boss-to-Clock-Out-on-Time-v02.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1Tj9i8WJdfOIXFyAhYlN304JspN-_dJEh/view?usp=drivesdk",
+          "synopsis": "<strong>ENJOYING YOURSELF IS HARD WORK!</strong><br/> Iffole’s annual Centennial Festival is right around the corner, and Alina is hell-bent on indulging in the food and fun this year instead of working overtime like she did the last two festivals. But just a few days before the event kicks off, her aspirations are jeopardized when a massive group of adventurers swarm Iffole Counter! It turns out they’ve all been tricked into believing that anyone who finds and clears a secret quest will get a powerful Dia kill. So what’s a girl to do? Simple—give the creator of that baseless rumor a beatdown!"
+        },
+        {
+          "volume": "1",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2023/09/I-May-Be-a-Guild-Receptionist-but-Ill-Solo-Any-Boss-to-Clock-Out-on-Time-v01.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1e-_I3OCQwUaKXx51t4-faR7MtTRH157R/view?usp=drivesdk",
+          "synopsis": "<strong>TAKE A HAMMER TO OVERWORK!</strong><br />Alina Clover signed up to be a receptionist for the Adventurers Guildthinking it would be her ticket to the good life—stable pay, regular hours, and safe workplace conditions. Unfortunately, her dream gig turns into a nightmare of endless paper work and overtime whenever the adventurers she helps coordinate get stuck clearing a dungeon. But people aren’t made to grind forever, so Alina sneaks off at night to give the monsters holding things up a beatdown, courtesy of her massive war hammer. Keeping this all under wraps to avoid violating her office’s ban on second jobs is difficult, especially when the tales of her exploits start to spread, but Alina somehow manages to keep her identity safe…until the leader of the strongest party in the guild catches her defeating a boss one fateful night! Does Alina have what it takes to stop her life from going topsy-turvy?!"
+        }
+      ]
+    },
+    {
       "id": "19",
       "title": "I Like Villains, so I Reincarnated as One",
       "coverImage": {
