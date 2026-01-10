@@ -1,6 +1,52 @@
 {
   "data": [
     {
+      "id": "21",
+      "title": "If the Villainess and Villain Met and Fell in Love",
+      "coverImage": {
+        "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2023/10/If-the-Villainess-and-Villain-Met-and-Fell-in-Love-Volume1.jpg?w=500&ssl=1",
+        "banner": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpgg4ZIRPF8KZN6RRsP2WlZoowvKRZeSmAKEC8Ovf9bso4zIhyIfV1hXKK&s=10"
+      },
+      "additional_info": {
+        "author": "Harunadon",
+        "status": "Releasing",
+        "type": "Light Novel",
+        "updatedAt": "1768086226",
+        "description": "<b>SOMETIMES FIRE AND ICE ARE PERFECT FOR EACH OTHER.</b> Brigitte Meidell belongs to a noble family, which means high expectations were placed upon her spirit contract. However, her bonded spirit turned out to be a weak no-name, and ever since, she has been a source of shame to her family. She thought her engagement to the prince would turn her life around, but when he publicly breaks off their relationship, she finds herself alone again. After her haughty, villainous behavior as the prince’s brideto- be, no one shows her much sympathy—except for the duke’s son Yuri, who attends the same magic academy. Yuri is feared for his incredible abilities and icy personality, but with him on her side, her fortunes might have changed…"
+      },
+      "genres": ["Drama", "Fantasy", "Romance"],
+      "source": {
+        "url": "https://yenpress.com/series/if-the-villainess-and-villain-met-and-fell-in-love-light-novel",
+        "name": "Yen Press"
+      },
+      "volumes": [
+        {
+          "volume": "4",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2025/12/If-the-Villainess-and-Villain-Met-and-Fell-in-Love-Vol.-4.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/12e9b-A9z9ZtoivcWEG1_VnqgQVBa5Y19/view?usp=drivesdk",
+          "synopsis": "As the graduation exam approaches, Brigitte’s library visits, wagers with Yuri, and school days are coming to an end. The exams prove to be tougher than expected, but Brigitte is ready to show off everything she’s learned and how much she’s grown. All that hard work leads Brigitte to reflect on her childhood as well. What sort of feeling was it that Yuri wanted to convey to Brigitte?"
+        },
+        {
+          "volume": "3",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2025/01/If-the-Villainess-and-Villain-Met-and-Fell-in-Love-v03.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/17DejU78x3IaJtKekBqHftAUSphfuLk8i/view?usp=drivesdk",
+          "synopsis": "Upon discovering that her contracted spirit was the legendary Phoenix, Brigitte’s father has finally invited her back to the main house. As the capital buzzes with anticipation for a major festival, Brigitte herself is feeling conflicted—but no matter what happens, she knows Yuri will stay by her side."
+        },
+        {
+          "volume": "2",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2024/02/If-the-Villainess-and-Villain-Met-and-Fell-in-Love-v02.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1ju66FVMp-f0xoa7oVtDDvy8vs4TDE8ro/view?usp=drivesdk",
+          "synopsis": "<b>THE SMALLEST SPARK CAN GROW INTO A FIRE.</b> When Prince Joseph broke off his engagement to Brigitte, her life was shattered—but meeting Yuri helped her start putting it together again. The two may have started off as rivals, yet the more she learns about him, the more she’s come to appreciate him…Unfortunately, Joseph is ready to turn everything upside down again, suddenly attempting to reinstate their engagement. Brigitte is far from eager to go back, but her relationship with Yuri is getting complicated. Not only that, but it seems her weak, no-name spirit might be something else entirely…!"
+        },
+        {
+          "volume": "1",
+          "cover": "https://i0.wp.com/jnovels.com/wp-content/uploads/2023/10/If-the-Villainess-and-Villain-Met-and-Fell-in-Love-Volume1.jpg?w=500&ssl=1",
+          "url": "https://drive.google.com/file/d/1YwbkG87KHjEf6QYV4qRhfeUPBHFxUWbb/view?usp=drivesdk",
+          "synopsis": "<b>SOMETIMES FIRE AND ICE ARE PERFECT FOR EACH OTHER.</b> Brigitte Meidell belongs to a noble family, which means high expectations were placed upon her spirit contract. However, her bonded spirit turned out to be a weak no-name, and ever since, she has been a source of shame to her family. She thought her engagement to the prince would turn her life around, but when he publicly breaks off their relationship, she finds herself alone again. After her haughty, villainous behavior as the prince’s brideto- be, no one shows her much sympathy—except for the duke’s son Yuri, who attends the same magic academy. Yuri is feared for his incredible abilities and icy personality, but with him on her side, her fortunes might have changed…"
+        }
+      ]
+    },
+    {
       "id": "20",
       "title": "I May Be a Guild Receptionist, But I’ll Solo Any Boss to Clock Out on Time",
       "coverImage": {
